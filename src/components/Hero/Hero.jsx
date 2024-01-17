@@ -4,10 +4,10 @@ import "./Hero.css";
 
 function Hero() {
     return (
-        <section className="container">
-            <div className="content"></div>            
+        <section className="hero-container">
+            <div className="hero-content"></div>
         </section>
-    )
+    );
 }
 
 export default Hero;
