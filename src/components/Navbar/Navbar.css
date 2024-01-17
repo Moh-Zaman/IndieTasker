@@ -1,0 +1,38 @@
+.navbar {
+display: flex;
+justify-content: center;
+background-color: blue;  
+};
+
+.container {
+width: 1400px;
+background-color: aquamarine;
+justify-content: space-between;
+padding: 20px 0px;
+};
+
+.text {
+font-size: 35px;
+font-weight: bold;
+};
+
+.links {
+display: flex;
+align-items: center;
+font-weight: 500;
+gap: 24px;
+};
+
+.button {
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+border: 1px solid white;
+cursor: pointer;
+background-color: transparent;
+}
+
+.button .hover {
+background-color: blueviolet;
+border-color: blueviolet;
+}
