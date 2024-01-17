@@ -1,0 +1,25 @@
+.carousel-container {
+    cursor: grab;
+    overflow: hidden;
+    margin: auto;
+    width: 60vw;
+}
+
+.horizontal-carousel {
+    display: flex;
+    width: 100vw;
+    gap: 20px;
+}
+
+.vertical-carousel {
+    display: block;
+    height: 40vh;
+}
+
+.example-card {
+    text-align: center;
+    border: 2px solid black;
+    width: 250px;
+    height: 300px;
+    margin-bottom: 20px;
+}
