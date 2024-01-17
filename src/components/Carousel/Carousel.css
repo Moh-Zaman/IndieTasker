@@ -2,6 +2,8 @@
     cursor: grab;
     overflow: hidden;
     margin: auto;
+    margin-top: 5%;
+    padding-top: 2%;
     width: 60vw;
 }
 
@@ -14,6 +16,7 @@
 .vertical-carousel {
     display: block;
     height: 40vh;
+    min-height: 400px;
 }
 
 .example-card {

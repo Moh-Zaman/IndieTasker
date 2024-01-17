@@ -1,0 +1,39 @@
+.freelancer-card {
+    height: 350px;
+    width: 250px;
+    border: 2px solid black;
+    margin-bottom: 8%;
+    padding: 2%;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #315a63;
+    color: white;
+    box-shadow: 0 0 15px black;
+}
+
+.freelancer-card-title {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.freelancer-card-image {
+    width: 90%;
+    pointer-events: none;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.freelancer-card-body {
+    padding: 2%;
+}
+
+.freelancer-card-text {
+    margin-bottom: 6%;
+}
+
+.freelancer-card-button {
+    border-radius: 15px;
+    width: 40%;
+    height: 30px;
+    cursor: pointer;
+}
