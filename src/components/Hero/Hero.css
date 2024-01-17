@@ -1,5 +1,124 @@
 .hero-container {
-    width: 100%;
-    height: 20px;
-    background-color: cyan;
+    background-color: #105075;
+    overflow-x: hidden;
+    margin: 20px;
+    
+}
+
+.hero-search {
+    position: absolute;
+    /* left: 13%; */
+    top: 5px;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-left: 150px;
+    
+    
+}
+
+.hero-row {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.hero-search:hover > .hero-searchText {
+    width: 240px;
+    padding: 0 6px;
+    margin-right: 200px;
+}
+
+.hero-searchBtn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-searchBtn img {
+    max-width:60%;
+    max-height:60%;
+}
+
+.hero-searchText {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+.hero-image img {
+    /* max-width:95%; */
+    max-height:95%;
+    margin: 20px;
+    float: right;
+    margin-right: 60px;
+}
+
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #2f3640;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+  margin-top: 40px;
+  
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: white;
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  color: #2f3640;
+  font-weight: 600;
+}
+
+.hero-inputs {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
 }
