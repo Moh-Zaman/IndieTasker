@@ -7,9 +7,7 @@ function Navbar() {
 
   return (
     <nav className="navigation">
-      <div className="brand-name"></div>
-        <span>IndieTasker</span>
-    
+      <div className="brand-name">IndieTasker</div>
       <button
         className="hamburger"
         onClick={() => {
@@ -43,7 +41,10 @@ function Navbar() {
             <a href="/about">About</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <button className="sign-up-button">Sign Up</button>
+          </li>
+          <li>
+            <button className="log-in-button">Login In</button>
           </li>
         </ul>
       </div>
