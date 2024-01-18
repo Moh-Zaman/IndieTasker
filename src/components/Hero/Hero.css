@@ -64,6 +64,20 @@
     width: 0px;
 }
 
+.hero-searchTextOpen {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0 6px;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 240px;
+  margin-right: 200px;
+}
+
 .hero-image img {
     /* max-width:95%; */
     max-height:95%;
