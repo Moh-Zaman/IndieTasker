@@ -6,7 +6,7 @@
     padding: 2%;
     text-align: center;
     border-radius: 15px;
-    background-color: #315a63;
+    background: radial-gradient(circle, rgb(77, 117, 139) 0%, rgb(139, 119, 172) 100%);
     color: white;
     box-shadow: 0 0 15px black;
 }
