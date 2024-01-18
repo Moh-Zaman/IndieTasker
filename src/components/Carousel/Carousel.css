@@ -1,9 +1,20 @@
+.carousel-parent {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+#carousel-next {
+}
+
 .carousel-container {
     cursor: grab;
     overflow: hidden;
     margin: auto;
+    margin-bottom: 5%;
     padding-top: 2%;
     width: 60vw;
+    height: 50vh;
 }
 
 .horizontal-carousel {
