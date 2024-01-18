@@ -12,8 +12,12 @@
     "dependencies": {
         "@ant-design/icons": "^5.2.6",
         "antd": "^5.13.1",
+        "@fortawesome/fontawesome-free": "^6.5.1",
+        "@react-google-maps/api": "^2.19.2",
+        "axios": "^1.6.5",
         "bootstrap": "^5.3.2",
         "framer-motion": "^10.18.0",
+        "mdb-react-ui-kit": "^7.1.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.21.2",

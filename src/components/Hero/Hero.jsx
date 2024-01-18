@@ -1,14 +1,35 @@
 import React from "react";
+import { useRef, useEffect, useState } from "react";
 
 import "./Hero.css";
 
+
+
 function Hero() {
+
+    const [heroClassName, setClassName] = useState('hero-searchText');
+    
+    const HeroTxt = useRef(null);
+
+    useEffect(() => {
+        const handleInput = () => {
+            setClassName(HeroTxt.current.value.trim() === '' ? 'hero-searchText' : 'hero-searchTextOpen')
+        }
+
+        HeroTxt.current.addEventListener('input', handleInput);
+
+        return () => {
+            HeroTxt.current.removeEventListener('input', handleInput);
+        };
+    }, []);
+
+
     return (
         <div className="hero-container">
             <div className="row hero-row">
                 <div className="col-4 hero-inputs">
                     <div className="hero-search">
-                        <input className="hero-searchText" type="text" name="" placeholder="Search for a Tasker" />
+                        <input className={heroClassName} ref={HeroTxt} type="text" name="" placeholder="Search for a Tasker" />
                         <button className="hero-searchBtn" href="#">
                             <img src="src\assets\Hero\SearchIcon.png" />
                         </button>
