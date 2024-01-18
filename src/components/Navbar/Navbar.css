@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 60px; /* needs adjusting, if you change this change .navigation-menu ul margin top as well */
   width: 100%;
   padding: 0.5rem 0rem;
   background-color: #D9D9D9;
@@ -29,11 +29,13 @@
 /* Navigation Menu Styles */
 .navigation-menu {
   margin-left: auto;
+  align-items: center;
 }
 
 .navigation-menu ul {
   display: flex;
-  padding: 0;
+  padding: 20px;
+  margin-top: 15px; /* have to adjust this to get items in the middle */
   align-items: center;
 }
 
