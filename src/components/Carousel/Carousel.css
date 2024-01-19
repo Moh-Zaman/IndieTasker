@@ -2,9 +2,22 @@
     width: 60%;
     margin: auto;
     display: flex;
+    align-items: center;
 }
 
-#carousel-next {
+.carousel-button {
+    height: 45px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    cursor: pointer;
+    color: rgb(111, 114, 255);
+    opacity: 90%;
+}
+
+.carousel-button:hover {
+    opacity: 100%;
 }
 
 .carousel-container {
