@@ -26,7 +26,8 @@ function Hero() {
 
     return (
         <div className="hero-container">
-            <div className="row hero-row">
+            <div className="row hero-row hero-image">
+            <img src="\src\assets\Hero\Banner-png\1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
                 <div className="col-4 hero-inputs">
                     <div className="hero-search">
                         <input className={heroClassName} ref={HeroTxt} type="text" name="" placeholder="Search for a Tasker" />
@@ -49,9 +50,6 @@ function Hero() {
                             <span className="name">Category</span>
                         </label>
                     </div>
-                </div>
-                <div className="col-4 hero-image">
-                    <img src="\src\assets\Hero\Banner-png\1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
                 </div>
             </div>
         </div>

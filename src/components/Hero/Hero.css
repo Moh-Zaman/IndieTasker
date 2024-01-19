@@ -1,8 +1,7 @@
 .hero-container {
-    background-color: #105075;
+    background-color: #001d1c; /* matches background colour of image */
     overflow-x: hidden;
     margin: 20px;
-    
 }
 
 .hero-search {
@@ -11,13 +10,11 @@
     top: 5px;
     transform: translate(-50%, -50%);
     /* background: #2f3640; */
-    background-color: #fff;
+    background-color: white; /*changes search background bar */
     height: 60px;
     border-radius: 40px;
     padding: 10px;
     margin-left: 150px;
-    
-    
 }
 
 .hero-row {
@@ -58,7 +55,7 @@
     outline: none;
     float: left;
     padding: 0;
-    color: white;
+    color: black;
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
@@ -71,7 +68,7 @@
   outline: none;
   float: left;
   padding: 0 6px;
-  color: white;
+  color: black; /*changes search bar typed text */
   font-size: 16px;
   transition: 0.4s;
   line-height: 40px;
@@ -80,11 +77,9 @@
 }
 
 .hero-image img {
-    /* max-width:95%; */
-    max-height:95%;
-    margin: 20px;
-    float: right;
-    margin-right: 60px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .radio-inputs {
@@ -92,13 +87,15 @@
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.5rem;
-  background-color: #2f3640;
+  background-color: #fff;
+  /* background-color: #2f3640; */
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
   width: 300px;
   font-size: 14px;
   margin-top: 40px;
+  color: black;
   
 }
 
@@ -119,13 +116,13 @@
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: white;
+  color: black;
   transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked + .name {
-  background-color: #fff;
-  color: #2f3640;
+  background-color: lightgrey;
+  color: #001d1c;
   font-weight: 600;
 }
 
