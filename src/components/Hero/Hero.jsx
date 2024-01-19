@@ -51,7 +51,7 @@ function Hero() {
                     </div>
                 </div>
                 <div className="col-4 hero-image">
-                    <img src="src\assets\Hero\HeroImage.jpg" alt="Hero image of man" />
+                    <img src="\src\assets\Hero\Banner-png\1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
                 </div>
             </div>
         </div>
