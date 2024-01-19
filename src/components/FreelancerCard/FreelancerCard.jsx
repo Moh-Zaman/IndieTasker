@@ -2,16 +2,16 @@ import "./FreelancerCard.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function FreelancerCard(props) {
+function FreelancerCard() {
 
     const [Users, setUsers] = useState([]);
     useEffect(() => {
       axios.get("https://randomuser.me/api/?results=25").then((Response) => {
         if (Response.data) {
-          console.log("FOund");
+          console.log("Found User");
           setUsers(Response.data.results);
         } else {
-          console.log("not found");
+          console.log("User not Found");
         }
       }).catch(error => console.log(error));
     }, []);
