@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+import UserGenerator from "../UserGenerator/UserGenerator";
 import FreelancerCard from "../FreelancerCard/FreelancerCard";
 
 import "./Carousel.css";
@@ -37,6 +38,7 @@ function Carousel() {
     function right() {
         console.log("right");
     }
+    UserGenerator();
 
     return (
         <div className="carousel-parent">
