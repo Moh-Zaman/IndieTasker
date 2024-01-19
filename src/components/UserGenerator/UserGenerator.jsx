@@ -13,6 +13,7 @@ function UserGenerator() {
     }, []);
 
     console.log(post);
+    return post;
 }
 
 export default UserGenerator;
