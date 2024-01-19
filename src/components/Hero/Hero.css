@@ -10,7 +10,8 @@
     /* left: 13%; */
     top: 5px;
     transform: translate(-50%, -50%);
-    background: #2f3640;
+    /* background: #2f3640; */
+    background-color: #fff;
     height: 60px;
     border-radius: 40px;
     padding: 10px;
