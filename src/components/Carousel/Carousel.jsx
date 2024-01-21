@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,76 +12,74 @@ import "./Carousel.css";
 const leftArrow = <FontAwesomeIcon icon={faCircleChevronLeft} size="3x" />;
 const rightArrow = <FontAwesomeIcon icon={faCircleChevronRight} size="3x" />;
 
-let sleep = false;
+let variants = {
+    left: { x: "90%", scale: 0.7, filter: "blur(5px)", zIndex: 0 },
+    center: { x: "0%", scale: 1, zIndex: 2 },
+    right: { x: "-90%", scale: 0.7, filter: "blur(5px)", zIndex: 1 },
+};
+
 function Carousel() {
     const [positionIndex, setPositionIndex] = useState([0, 1, 2]);
     const [positionIndex1, setPositionIndex1] = useState([0, 1, 2]);
     const [positionIndex2, setPositionIndex2] = useState([0, 1, 2]);
 
-    const left1 = useRef();
+    function handleNext(e) {
+        let btnId = e.currentTarget.id;
 
-    function handleNext() {
-        setPositionIndex((prevIndex) => {
-            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
-            return updatedIndex;
-        });
-    }
-
-    function sleepScroll() {
-        if (sleep === false) {
-            handleNext();
+        if (btnId === "L1") {
+            variants.left.zIndex = 0;
+            variants.right.zIndex = 1;
+            setPositionIndex((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+                return updatedIndex;
+            });
+        } else if (btnId === "R1") {
+            variants.left.zIndex = 1;
+            variants.right.zIndex = 0;
+            setPositionIndex((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 2) % 3);
+                return updatedIndex;
+            });
         }
-        sleep = true;
-        setTimeout(function () {
-            sleep = false;
-        }, 200);
-    }
 
-    function handleNext1() {
-        setPositionIndex1((prevIndex) => {
-            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
-            return updatedIndex;
-        });
-    }
-
-    function sleepScroll1() {
-        if (sleep === false) {
-            handleNext1();
+        if (btnId === "L2") {
+            variants.left.zIndex = 0;
+            variants.right.zIndex = 1;
+            setPositionIndex1((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+                return updatedIndex;
+            });
+        } else if (btnId === "R2") {
+            variants.left.zIndex = 1;
+            variants.right.zIndex = 0;
+            setPositionIndex1((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 2) % 3);
+                return updatedIndex;
+            });
         }
-        sleep = true;
-        setTimeout(function () {
-            sleep = false;
-        }, 200);
-    }
 
-    function handleNext2() {
-        setPositionIndex2((prevIndex) => {
-            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
-            return updatedIndex;
-        });
-    }
-
-    function sleepScroll2() {
-        if (sleep === false) {
-            handleNext2();
+        if (btnId === "L3") {
+            variants.left.zIndex = 0;
+            variants.right.zIndex = 1;
+            setPositionIndex2((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+                return updatedIndex;
+            });
+        } else if (btnId === "R3") {
+            variants.left.zIndex = 1;
+            variants.right.zIndex = 0;
+            setPositionIndex2((prevIndex) => {
+                const updatedIndex = prevIndex.map((prevInd) => (prevInd + 2) % 3);
+                return updatedIndex;
+            });
         }
-        sleep = true;
-        setTimeout(function () {
-            sleep = false;
-        }, 200);
     }
+
+    const positions = ["left", "center", "right"];
 
     const cards = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
     const cards1 = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
     const cards2 = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
-
-    const positions = ["left", "center", "right"];
-
-    let variants = {
-        left: { x: "90%", scale: 0.7, filter: "blur(5px)" },
-        center: { x: "0%", scale: 1 },
-        right: { x: "-90%", scale: 0.7, filter: "blur(5px)" },
-    };
 
     return (
         <>
@@ -90,24 +88,17 @@ function Carousel() {
                 <div className="carousel">
                     <h3 className="freelancer-type">Carpenters</h3>
 
-                    <i ref={left1} className="left-arrow" onClick={sleepScroll}>
+                    <i className="left-arrow" id="L1" onClick={handleNext}>
                         {leftArrow}
                     </i>
 
                     {cards.map((card, index) => (
-                        <motion.div
-                            onPan={sleepScroll}
-                            key={index + "0"}
-                            className="item"
-                            initial="center"
-                            animate={positions[positionIndex[index]]}
-                            variants={variants}
-                            transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "0"} className="item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
 
-                    <i className="right-arrow" onClick={sleepScroll}>
+                    <i className="right-arrow" id="R1" onClick={handleNext}>
                         {rightArrow}
                     </i>
                 </div>
@@ -115,24 +106,17 @@ function Carousel() {
                 <div className="carousel">
                     <h3 className="freelancer-type">Developers</h3>
 
-                    <i className="left-arrow" onClick={sleepScroll1}>
+                    <i className="left-arrow" id="L2" onClick={handleNext}>
                         {leftArrow}
                     </i>
 
                     {cards1.map((card, index) => (
-                        <motion.div
-                            onPan={sleepScroll1}
-                            key={index + "1"}
-                            className="item"
-                            initial="center"
-                            animate={positions[positionIndex1[index]]}
-                            variants={variants}
-                            transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "1"} className="item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
 
-                    <i className="right-arrow" onClick={sleepScroll1}>
+                    <i className="right-arrow" id="R2" onClick={handleNext}>
                         {rightArrow}
                     </i>
                 </div>
@@ -140,24 +124,17 @@ function Carousel() {
                 <div className="carousel">
                     <h3 className="freelancer-type">Translators</h3>
 
-                    <i className="left-arrow" onClick={sleepScroll2}>
+                    <i className="left-arrow" id="L3" onClick={handleNext}>
                         {leftArrow}
                     </i>
 
                     {cards2.map((card, index) => (
-                        <motion.div
-                            onPan={sleepScroll2}
-                            key={index + "2"}
-                            className="item"
-                            initial="center"
-                            animate={positions[positionIndex2[index]]}
-                            variants={variants}
-                            transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "2"} className="item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
 
-                    <i className="right-arrow" onClick={sleepScroll2}>
+                    <i className="right-arrow" id="R3" onClick={handleNext}>
                         {rightArrow}
                     </i>
                 </div>
