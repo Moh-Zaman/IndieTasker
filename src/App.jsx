@@ -1,4 +1,5 @@
 import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./pages/Login/Login";
 import { Route, Routes } from "react-router-dom";
@@ -13,6 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/about" element={<About />} />
             </Routes>
             <Footer />
         </div>
