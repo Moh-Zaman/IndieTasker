@@ -16,6 +16,7 @@
     border-radius: 15px;
     height: 500px;
     width: 33vw;
+    overflow-x: hidden;
 }
 
 .item {
