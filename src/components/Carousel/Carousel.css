@@ -1,3 +1,7 @@
+.featured-title {
+    text-align: center;
+}
+
 .carousel-container {
     display: flex;
     touch-action: none;
@@ -33,4 +37,31 @@
     width: 33vw;
     display: flex;
     position: relative;
+}
+
+.left-arrow {
+    position: absolute;
+    color: rgb(72, 72, 226);
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 99;
+    margin-top: 35%;
+    margin-left: -85%;
+    opacity: 90%;
+}
+
+.right-arrow {
+    position: absolute;
+    color: rgb(72, 72, 226);
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 99;
+    margin-top: 35%;
+    margin-right: -85%;
+    opacity: 90%;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+    opacity: 100%;
 }
