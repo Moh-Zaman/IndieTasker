@@ -76,9 +76,9 @@ function Carousel() {
     const positions = ["left", "center", "right"];
 
     let variants = {
-        left: { x: "90%", scale: 0.7 },
+        left: { x: "90%", scale: 0.7, filter: "blur(5px)" },
         center: { x: "0%", scale: 1 },
-        right: { x: "-90%", scale: 0.7 },
+        right: { x: "-90%", scale: 0.7, filter: "blur(5px)" },
     };
 
     return (
