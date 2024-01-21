@@ -1,51 +1,36 @@
-.carousel-parent {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-
-.carousel-button {
-    height: 45px;
-    width: 50px;
-    border-radius: 50%;
-    margin-left: 2%;
-    margin-right: 2%;
-    cursor: pointer;
-    color: rgb(111, 114, 255);
-    opacity: 90%;
-}
-
-.carousel-button:hover {
-    opacity: 100%;
-}
-
 .carousel-container {
-    cursor: grab;
-    overflow: hidden;
-    margin: auto;
-    margin-bottom: 5%;
-    padding-top: 2%;
-    width: 60vw;
-    height: 50vh;
-}
-
-.horizontal-carousel {
     display: flex;
-    width: 100vw;
-    gap: 20px;
+    touch-action: none;
+    user-select: none;
 }
 
-.vertical-carousel {
-    display: block;
-    height: 40vh;
-    min-height: 400px;
+.carousel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 500px;
+    width: 33vw;
 }
 
-.example-card {
-    text-align: center;
+.item {
+    position: absolute;
+    margin-top: 10%;
+}
+
+.carousel1 {
     border: 2px solid black;
-    width: 250px;
-    height: 300px;
-    margin-bottom: 20px;
+    height: 400px;
+    width: 33vw;
+    display: flex;
+    position: relative;
+}
+
+.carousel2 {
+    border: 2px solid black;
+    height: 400px;
+    width: 33vw;
+    display: flex;
+    position: relative;
 }
