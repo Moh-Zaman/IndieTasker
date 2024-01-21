@@ -16,7 +16,7 @@ function GoogleMaps() {
     <div className="googleMaps">
         {!isLoaded ? (<h1>Loading...</h1>) : 
         (
-        <GoogleMap mapContainerClassName="maps-container" center={center} zoom={2.5}>
+        <GoogleMap mapContainerClassName="maps-container" center={center} zoom={100}>
         </GoogleMap>
         )}
     </div>
