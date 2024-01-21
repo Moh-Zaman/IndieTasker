@@ -1,11 +1,20 @@
 import React from "react";
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import axios from "axios";
 
 
 export default function Auth() {
     const onFinish = value => {
-        
+        const {username,password} = value
+        axios.post('https://localhost:3001/validatePassword', {username, password})
+        .then(res=>{
+            if(res.data.validation){
+              alert('Password matches')
+            } else {
+              alert('Password bad!')
+            }
+        }) 
     }
     return (
         <div>
