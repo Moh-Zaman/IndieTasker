@@ -6,77 +6,109 @@ import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import FreelancerCard from "../FreelancerCard/FreelancerCard";
-import axios from "axios";
 
 import "./Carousel.css";
 
 const leftArrow = <FontAwesomeIcon icon={faCircleChevronLeft} size="3x" />;
 const rightArrow = <FontAwesomeIcon icon={faCircleChevronRight} size="3x" />;
 
+let sleep = false;
 function Carousel() {
-    const [width, setWidth] = useState(0);
-    const [height, setHeight] = useState(0);
-    const carousel = useRef();
-    const innerCarousel = useRef();
+    const [positionIndex, setPositionIndex] = useState([0, 1, 2]);
+    const [positionIndex1, setPositionIndex1] = useState([0, 1, 2]);
+    const [positionIndex2, setPositionIndex2] = useState([0, 1, 2]);
 
-    const [scroll, setScroll] = useState(0);
-
-    useEffect(() => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-    }, []);
-
-    useEffect(() => {
-        setHeight(innerCarousel.current.scrollHeight - innerCarousel.current.offsetHeight);
-    }, []);
-
-    function left() {
-        useEffect(() => {
-            setScroll((carousel.current.scrollRight += 100));
-        }, []);
+    function handleNext() {
+        setPositionIndex((prevIndex) => {
+            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+            return updatedIndex;
+        });
     }
 
-    function right() {
-        console.log("right");
+    function sleepScroll() {
+        if (sleep === false) {
+            handleNext();
+        }
+        sleep = true;
+        setTimeout(function () {
+            sleep = false;
+        }, 200);
     }
-    
+
+    function handleNext1() {
+        setPositionIndex1((prevIndex) => {
+            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+            return updatedIndex;
+        });
+    }
+
+    function sleepScroll1() {
+        if (sleep === false) {
+            handleNext1();
+        }
+        sleep = true;
+        setTimeout(function () {
+            sleep = false;
+        }, 200);
+    }
+
+    function handleNext2() {
+        setPositionIndex2((prevIndex) => {
+            const updatedIndex = prevIndex.map((prevInd) => (prevInd + 1) % 3);
+            return updatedIndex;
+        });
+    }
+
+    function sleepScroll2() {
+        if (sleep === false) {
+            handleNext2();
+        }
+        sleep = true;
+        setTimeout(function () {
+            sleep = false;
+        }, 200);
+    }
+
+    const cards = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
+    const cards1 = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
+    const cards2 = [<FreelancerCard />, <FreelancerCard />, <FreelancerCard />];
+
+    const positions = ["left", "center", "right"];
+
+    let variants = {
+        left: { x: "90%", scale: 0.7 },
+        center: { x: "0%", scale: 1 },
+        right: { x: "-90%", scale: 0.7 },
+    };
 
     return (
-        <div className="carousel-parent">
-            <i className="carousel-button" id="carousel-previous" onClick={left}>
-                {leftArrow}
-            </i>
-            <motion.div ref={carousel} className="carousel-container">
-                <motion.div ref={innerCarousel} drag="x" dragConstraints={{ right: 15, left: -width }} initial={{ x: 15 }} className="horizontal-carousel">
-                    <motion.div drag="y" dragConstraints={{ bottom: 0, top: -height - 15 }} className="vertical-carousel">
-                        <FreelancerCard />
-                        <FreelancerCard />
-                        <FreelancerCard />
+        <div className="carousel-container">
+            <div className="carousel">
+                <h3 className="freelancer-type">Designers</h3>
+                {cards.map((card, index) => (
+                    <motion.div onPan={sleepScroll} key={index} className="item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        {card}
                     </motion.div>
-                    <motion.div drag="y" dragConstraints={{ bottom: 0, top: -height - 15 }} className="vertical-carousel">
-                        <FreelancerCard />
-                        <FreelancerCard />
-                        <FreelancerCard />
+                ))}
+            </div>
+
+            <div className="carousel">
+                <h3 className="freelancer-type">Developers</h3>
+                {cards1.map((card, index) => (
+                    <motion.div onPan={sleepScroll1} key={index} className="item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        {card}
                     </motion.div>
-                    <motion.div drag="y" dragConstraints={{ bottom: 0, top: -height - 15 }} className="vertical-carousel">
-                        <FreelancerCard />
-                        <FreelancerCard />
-                        <FreelancerCard />
+                ))}
+            </div>
+
+            <div className="carousel">
+                <h3 className="freelancer-type">Translators</h3>
+                {cards2.map((card, index) => (
+                    <motion.div onPan={sleepScroll2} key={index} className="item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        {card}
                     </motion.div>
-                    <motion.div drag="y" dragConstraints={{ bottom: 0, top: -height - 15 }} className="vertical-carousel">
-                        <FreelancerCard />
-                        <FreelancerCard />
-                        <FreelancerCard />
-                    </motion.div>
-                    <motion.div drag="y" dragConstraints={{ bottom: 0, top: -height - 15 }} className="vertical-carousel">
-                        <FreelancerCard />
-                        <FreelancerCard />
-                        <FreelancerCard />
-                    </motion.div>
-                </motion.div>
-            </motion.div>
-            <i className="carousel-button" id="carousel-next" onClick={right}>
-                {rightArrow}
-            </i>
+                ))}
+            </div>
         </div>
     );
 }

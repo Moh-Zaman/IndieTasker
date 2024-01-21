@@ -1,12 +1,11 @@
 .freelancer-card {
     height: 380px;
     width: 250px;
-    border: 2px solid black;
     margin-bottom: 8%;
     padding: 2%;
     text-align: center;
     border-radius: 15px;
-    background: radial-gradient(circle, rgb(77, 117, 139) 0%, rgb(139, 119, 172) 100%);
+    background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgba(5, 94, 140, 1) 0%, rgba(201, 244, 252, 1) 100%);
     color: white;
     box-shadow: 0 0 15px black;
 }
