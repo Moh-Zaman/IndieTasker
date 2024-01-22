@@ -1,0 +1,32 @@
+/* FAQ Container */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  /* FAQ Title */
+  .faq-title {
+    text-align: center;
+    color: #007bff; /* Blue color for the title */
+    margin-bottom: 20px;
+  }
+  
+  /* Accordion styling */
+  .accordion-body {
+    background-color: #ffffff; /* White background for accordion body */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  
+  /* Hover effect for accordion header */
+  .accordion-header:hover {
+    background-color: #e2e6ea; /* Lighter gray background on hover */
+  }
+  
