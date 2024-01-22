@@ -2,18 +2,28 @@ import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import { Nav } from "react-bootstrap/esm";
 
 export default function Auth() {
+    
+    let loginSuccessful
+
+    const navigate = useNavigate();
+    
     const onFinish = (value) => {
         const { username, password } = value;
+
         axios.post("http://localhost:3001/validatePassword", { username, password }).then((res) => {
             if (res.data.validation) {
-                alert("Success!");
+                navigate('/profile')
             } else {
-                alert("Password bad!");
+                alert("Password bad!");                
             }
         });
     };
+
+
     return (
         <div>
             <Form
@@ -54,7 +64,7 @@ export default function Auth() {
                 </Form.Item>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
+                    <Button  type="primary" htmlType="submit" className="login-form-button">
                         Log in
                     </Button>
                     Or <a href="">register now!</a>
