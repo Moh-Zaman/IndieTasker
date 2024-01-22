@@ -34,11 +34,13 @@ function Navbar() {
                         <a className="sign-up-button" href="/register">
                             Sign Up
                         </a>
+                    <a href="/profile">My Profile</a>
                     </li>
                     <li>
-                        <a className="log-in-button" href="/login">
-                            Log In
-                        </a>
+                    <a className="sign-up-button" href="/sign-up">Sign Up</a>
+                    </li>
+                    <li>
+                        <a className="log-in-button" href="/login">Log In</a>
                     </li>
                 </ul>
             </div>
