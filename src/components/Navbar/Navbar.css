@@ -113,30 +113,53 @@
 }
 
 /* Media Queries for Navigation Menu */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
+  navigation-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-top: 1px solid #030b2c;
+    display: none;
+    z-index: 999; /* Ensure the navigation menu appears above other elements */
+  }
+
+  .navigation-menu.expanded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
   .hamburger {
     display: block;
+    z-index: 999;
   }
 
   .navigation-menu ul {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 45px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 45px);
     background-color: white;
-    border-top: 1px solid black;
+    border-top: 1px solid #030b2c;
     display: none;
   }
 
   .navigation-menu li {
     text-align: center;
+    background-color: white;
+    border: 1px solid rgb(238, 238, 238);
     margin: 0;
   }
 
   .navigation-menu li a {
-    color: black;
+    color: #030b2c;
     width: 100%;
     padding: 1.5rem 0;
   }
@@ -148,4 +171,18 @@
   .navigation-menu.expanded ul {
     display: block;
   }
+  
+  .log-in-button, .sign-up-button {
+    color: black;
+    background-color: #F29696;
+    display: inline-block; /* Make the button inline-block */
+  }
+  
+  .log-in-button:hover, .sign-up-button:hover {
+    background-color: #030b2c;
+    border-color: black;
+    color: white;
+    display: inline-block;
+  }
+
 }
