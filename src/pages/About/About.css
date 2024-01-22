@@ -1,0 +1,27 @@
+/* About Section Styles */
+.about {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  .about-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-heading {
+    color: #007bff; /* Blue color for the heading */
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .about-text {
+    color: #333; /* Dark gray color for the text */
+    font-size: 16px;
+    line-height: 1.5;
+  }
