@@ -31,7 +31,9 @@ function Navbar() {
                         <a href="/about">About</a>
                     </li>
                     <li>
-                        <button className="sign-up-button">Sign Up</button>
+                        <a className="sign-up-button" href="/register">
+                            Sign Up
+                        </a>
                     </li>
                     <li>
                         <a className="log-in-button" href="/login">
