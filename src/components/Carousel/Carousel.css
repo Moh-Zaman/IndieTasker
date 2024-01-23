@@ -6,26 +6,31 @@
     display: flex;
     touch-action: none;
     user-select: none;
+    padding: 10px;
+    justify-content: space-around;
+    margin: 10px;
+    gap: 10px;
 }
 
 .carousel {
     display: flex;
     position: relative;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 15px;
     height: 500px;
     width: 33vw;
     overflow-x: hidden;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
 }
 
 .item {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 .carousel1 {
-    border: 2px solid black;
+    border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
     display: flex;
@@ -33,7 +38,7 @@
 }
 
 .carousel2 {
-    border: 2px solid black;
+    border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
     display: flex;
@@ -42,19 +47,20 @@
 
 .left-arrow {
     position: absolute;
-    color: rgb(72, 72, 226);
-    border: 2px solid black;
+    color: #ea906c;
+    border: 2px solid #030b2c;;
     border-radius: 50%;
     z-index: 99;
     margin-top: 35%;
     margin-left: -85%;
     opacity: 90%;
+    border-color: #030b2c;
 }
 
 .right-arrow {
     position: absolute;
-    color: rgb(72, 72, 226);
-    border: 2px solid black;
+    color: #ea906c;
+    border: 2px solid #030b2c;;
     border-radius: 50%;
     z-index: 99;
     margin-top: 35%;
@@ -65,4 +71,58 @@
 .right-arrow:hover,
 .left-arrow:hover {
     opacity: 100%;
+    background-color: #030b2c;
+}
+
+/* Headings - NEEDS WORK*/
+/* .freelancer-type {
+    font-size: large;
+}
+
+.featured-title {
+    font-size: large;
+} */
+
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 880px) {
+    .carousel-container {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 1px;
+    }
+
+    .carousel,
+    .carousel1,
+    .carousel2 {
+        width: 100%; 
+        border-radius: 0;
+        margin: 5px;
+        margin-bottom: 5px; 
+        border-radius: 10px;
+    }
+
+    .freelancer-type {
+        font-size: 1.5em; 
+    }
+} 
+
+@media only screen and (max-width: 550px) {
+    .carousel-container {
+        margin-top: 10px;
+        margin-bottom: none;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .carousel,
+    .carousel1,
+    .carousel2 {
+        margin-bottom: none; 
+       
+    }
+
+    .item {
+        margin-top: 15%;
+    }
 }
