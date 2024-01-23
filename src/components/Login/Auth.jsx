@@ -3,8 +3,9 @@ import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Auth.css";
+import "./Auth.css";  // Importing the CSS file for styling
 
+// Defining the Authentication component
 export default function Auth() {
     let loginSuccessful;
 
@@ -13,6 +14,7 @@ export default function Auth() {
     const onFinish = (value) => {
         const { username, password } = value;
 
+        // Sending a request to validate the password
         axios.post("http://localhost:3001/validatePassword", { username, password }).then((res) => {
             if (res.data.validation) {
                 navigate("/profile");
@@ -35,6 +37,7 @@ export default function Auth() {
                     remember: true,
                 }}
                 onFinish={onFinish}>
+                {/* Form input for username */}
                 <Form.Item
                     name="username"
                     rules={[
@@ -45,34 +48,5 @@ export default function Auth() {
                     ]}>
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                 </Form.Item>
-                <Form.Item
-                    name="password"
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your Password!",
-                        },
-                    ]}>
-                    <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
-                </Form.Item>
-                <Form.Item>
-                    <Form.Item name="remember" valuePropName="checked" noStyle>
-                        <Checkbox>Remember me</Checkbox>
-                    </Form.Item>
 
-                    <a className="login-form-forgot" href="">
-                        Forgot password
-                    </a>
-                </Form.Item>
 
-                <Form.Item>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
-                        Log in
-                    </Button>
-                    <p className="spacing">Dont have a login? <a href="/register">Register here!</a></p>
-
-                </Form.Item>
-            </Form>
-        </div>
-    );
-}
