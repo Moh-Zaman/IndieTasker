@@ -69,7 +69,8 @@ export default function Auth() {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Log in
                     </Button>
-                    Or <a href="/register">register now!</a>
+                    <p className="spacing">Dont have a login? <a href="/register">Register here!</a></p>
+
                 </Form.Item>
             </Form>
         </div>

@@ -101,7 +101,7 @@ function Registration() {
                     </Button>
 
                     {/* Link to login page */}
-                    <p className="spacing">Already registered? <a href="/login">login here!</a></p>
+                    <p className="spacing">Already registered? <a href="/login">Login here!</a></p>
                 </Form.Item>
             </Form>
         </div>
