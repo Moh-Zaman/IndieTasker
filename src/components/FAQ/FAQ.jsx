@@ -36,22 +36,22 @@ function FAQ() {
           <Accordion.Body>
           ndieTasker utilizes a secure payment system. Clients make payments through the platform, and funds are held in escrow until the freelancer completes the project to the client's satisfaction. This ensures a fair and transparent process for both parties.          </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="3">
-          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+        <Accordion.Item eventKey="5">
+          <Accordion.Header>Are there any fees for using IndieTasker?</Accordion.Header>
           <Accordion.Body>
-          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          IndieTasker is free for freelancers to join and create profiles. For each completed transaction, a service fee is deducted from the freelancer's earnings. Clients are not charged a fee for posting projects.
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="3">
-          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+        <Accordion.Item eventKey="6">
+          <Accordion.Header>How do I ensure the security of my information on IndieTasker?</Accordion.Header>
           <Accordion.Body>
-          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
-          </Accordion.Body>
+          IndieTasker prioritizes the security of user information. We use industry-standard encryption and take measures to protect user data. It's essential to follow best practices for online security, such as using unique passwords and enabling two-factor authentication.
+        </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="3">
-          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+        <Accordion.Item eventKey="7">
+          <Accordion.Header>Can I hire multiple freelancers for a single project?</Accordion.Header>
           <Accordion.Body>
-          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          This is currently not possible but we are aim to add this feature in the future.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
