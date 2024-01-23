@@ -68,7 +68,8 @@ function Registration() {
                     <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Confirm Password" />
                 </Form.Item>
 
-                <p>I am a:</p>
+                <div className="login-redirect">I am a:</div>
+                
                 <Radio.Group
                     rules={[
                         {
@@ -84,7 +85,7 @@ function Registration() {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Register
                     </Button>
-                    <p className="login-redirect">Already registered? <a href="/login">login here!</a></p>
+                    <p className="spacing">Already registered? <a href="/login">login here!</a></p>
                 </Form.Item>
             </Form>
         </div>
