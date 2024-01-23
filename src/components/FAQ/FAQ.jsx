@@ -38,7 +38,7 @@ function FAQ() {
         <Accordion.Item eventKey="4">
           <Accordion.Header>How are payments handled on IndieTasker?</Accordion.Header>
           <Accordion.Body>
-          ndieTasker utilizes a secure payment system. Clients make payments through the platform, and funds are held in escrow until the freelancer completes the project to the client's satisfaction. This ensures a fair and transparent process for both parties.          </Accordion.Body>
+          IndieTasker utilizes a secure payment system. Clients make payments through the platform, and funds are held in escrow until the freelancer completes the project to the client's satisfaction. This ensures a fair and transparent process for both parties.          </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="5">
           <Accordion.Header>Are there any fees for using IndieTasker?</Accordion.Header>
@@ -55,7 +55,7 @@ function FAQ() {
         <Accordion.Item eventKey="7">
           <Accordion.Header>Can I hire multiple freelancers for a single project?</Accordion.Header>
           <Accordion.Body>
-          This is currently not possible but we are aim to add this feature in the future.
+          This is currently not possible but we are aiming to add this feature in the future.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="8">
