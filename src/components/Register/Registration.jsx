@@ -10,21 +10,25 @@ function Registration() {
     const [userInfo, setUserInfo] = useState({
         username: "",
         password: "",
+        confirm: "",
         email: "",
         accType: "",
     });
 
     // Function to handle registration authentication
-    function regAuth(value) {
-        const { username, password, confirm, email, accType } = value;
-
+    function regAuth() {
+        if (userInfo.accType === "") {
+            alert("Please tell us what you are!");
+            return;
+        }
         // Checking if passwords match and making a registration request
-        if (password === confirm) {
-            axios.post("http://localhost:3001/register", { username, password, email, accType }).then(() => {
+        if (userInfo.password === userInfo.confirm) {
+            axios.post("http://localhost:3001/register", { username: userInfo.username, password: userInfo.password, email: userInfo.email, accType: userInfo.accType }).then(() => {
                 alert("Registered!");
             });
         } else {
             alert("Passwords don't match!");
+            return;
         }
     }
 
@@ -43,7 +47,7 @@ function Registration() {
                 onFinish={regAuth}>
                 {/* Form input for username */}
                 <Form.Item
-                    name={userInfo.username}
+                    onChange={(e) => setUserInfo({ ...userInfo, username: e.target.value })}
                     rules={[
                         {
                             required: true,
@@ -55,7 +59,7 @@ function Registration() {
 
                 {/* Form input for email */}
                 <Form.Item
-                    name="email"
+                    onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
                     rules={[
                         {
                             required: true,
@@ -67,7 +71,7 @@ function Registration() {
 
                 {/* Form input for password */}
                 <Form.Item
-                    name={userInfo.password}
+                    onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
                     rules={[
                         {
                             required: true,
@@ -79,7 +83,7 @@ function Registration() {
 
                 {/* Form input for confirming password */}
                 <Form.Item
-                    name="confirm"
+                    onChange={(e) => setUserInfo({ ...userInfo, confirm: e.target.value })}
                     rules={[
                         {
                             required: true,
@@ -100,8 +104,12 @@ function Registration() {
                             message: "Please tell us what you are!",
                         },
                     ]}>
-                    <Radio value="client">Client</Radio>
-                    <Radio value="freelancer">Freelancer</Radio>
+                    <Radio value="client" onChange={(e) => setUserInfo({ ...userInfo, accType: e.target.value })}>
+                        Client
+                    </Radio>
+                    <Radio value="freelancer" onChange={(e) => setUserInfo({ ...userInfo, accType: e.target.value })}>
+                        Freelancer
+                    </Radio>
                 </Radio.Group>
 
                 {/* Form submission button */}
