@@ -27,12 +27,12 @@ function Hero() {
     return (
         <div className="hero-container">
             <div className="row hero-row hero-image">
-            <img src="\src\assets\Hero\Banner-png\1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
+            <img src="./assets/Hero/Banner-png/1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
                 <div className="col-4 hero-inputs">
                     <div className="hero-search">
                         <input className={heroClassName} ref={HeroTxt} type="text" name="" placeholder="Search for a Tasker" />
                         <button className="hero-searchBtn" href="#">
-                            <img src="src\assets\Hero\SearchIcon.png" />
+                            <img src="./assets/Hero/SearchIcon.png" />
                         </button>
                     </div>
                     <div className="radio-inputs">
