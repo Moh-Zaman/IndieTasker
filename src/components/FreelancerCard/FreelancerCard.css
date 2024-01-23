@@ -5,9 +5,10 @@
     padding: 2%;
     text-align: center;
     border-radius: 5px;
-    background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%);
-    color: white;
-    box-shadow: 0 0 10px black;
+    background-color: #315a63;
+    /* background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%); */
+    color: #faefec;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 .freelancer-card-title {
@@ -28,7 +29,7 @@
 }
 
 .freelancer-card-text {
-    color: black;
+    color: #faefec;
     margin-bottom: 6%;
     font-size: 85%;
 }
@@ -38,4 +39,13 @@
     width: 40%;
     height: 30px;
     cursor: pointer;
+    background-color: #ffc8b5;
+    color: #030b2c;
+    outline: #030b2c;
+}
+
+.freelancer-card-button:hover {
+    background-color: #ea906c;
+    color: #030b2c;
+    outline: #030b2c;
 }
