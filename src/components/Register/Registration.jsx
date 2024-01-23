@@ -84,8 +84,7 @@ function Registration() {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Register
                     </Button>
-                    <br />
-                    Already registered? <a href="/login">login here!</a>
+                    <p className="login-redirect">Already registered? <a href="/login">login here!</a></p>
                 </Form.Item>
             </Form>
         </div>
