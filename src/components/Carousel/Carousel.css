@@ -66,3 +66,23 @@
 .left-arrow:hover {
     opacity: 100%;
 }
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column; /* Display the carousels in a column on smaller screens */
+    }
+
+    .carousel,
+    .carousel1,
+    .carousel2 {
+        width: 100%; /* Make the carousels take the full width on smaller screens */
+        border-radius: 0; /* Remove border radius on smaller screens if needed */
+        margin-bottom: 20px; /* Add some space between carousels on smaller screens */
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none; /* Hide the left and right arrows on smaller screens */
+    }
+}

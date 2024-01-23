@@ -1,19 +1,20 @@
 .freelancer-card {
     height: 380px;
     width: 250px;
-    margin-bottom: 8%;
-    padding: 2%;
+    margin-bottom: 4%;
+    padding: 5%;
     text-align: center;
     border-radius: 5px;
     background-color: #315a63;
     /* background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%); */
     color: #faefec;
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    border-color: #030b2c;
 }
 
 .freelancer-card-title {
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
     font-size: 140%;
 }
 
@@ -21,22 +22,23 @@
     width: 90%;
     pointer-events: none;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid #030b2c;
 }
 
 .freelancer-card-body {
-    padding: 2%;
+    padding: 4%;
 }
 
 .freelancer-card-text {
     color: #faefec;
     margin-bottom: 6%;
+    margin-top: 4%;
     font-size: 85%;
 }
 
 .freelancer-card-button {
-    border-radius: 15px;
-    width: 40%;
+    border-radius: 14px;
+    width: 50%;
     height: 30px;
     cursor: pointer;
     background-color: #ffc8b5;
@@ -48,4 +50,21 @@
     background-color: #ea906c;
     color: #030b2c;
     outline: #030b2c;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .freelancer-card {
+        height: 360px;
+    }
+
+    .freelancer-card-image {
+        width: 80%; /* Adjusted width for mobile screens */
+        outline: none;
+    }
+
+    .freelancer-card-button {
+        width: 45%; /* Adjusted button width for mobile screens */
+    }
+    
 }
