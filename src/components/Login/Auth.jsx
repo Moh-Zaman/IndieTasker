@@ -49,4 +49,37 @@ export default function Auth() {
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                 </Form.Item>
 
+                {/* Form input for password */}
+                <Form.Item
+                    name="password"
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please input your Password!",
+                        },
+                    ]}>
+                    <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
+                </Form.Item>
 
+                {/* Remember me, checkbox and Forgot password link */}
+                <Form.Item>
+                    <Form.Item name="remember" valuePropName="checked" noStyle>
+                        <Checkbox>Remember me</Checkbox>
+                    </Form.Item>
+
+                    <a className="login-form-forgot" href="">
+                        Forgot password
+                    </a>
+                </Form.Item>
+
+                {/* Form submission button and Register link */}
+                <Form.Item>
+                    <Button type="primary" htmlType="submit" className="login-form-button">
+                        Log in
+                    </Button>
+                    <p className="spacing">Don't have a login? <a href="/register">Register here!</a></p>
+                </Form.Item>
+            </Form>
+        </div>
+    );
+}
