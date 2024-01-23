@@ -2,10 +2,14 @@ import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import "./FAQ.css";
 
+// FAQ component to display frequently asked questions using React Bootstrap Accordion.
 function FAQ() {
   return (
     <div className="faq-container">
+      {/* Heading for the FAQ section. */}
       <h2 className="faq-title">Frequently Asked Questions</h2>
+
+      {/* React Bootstrap Accordion component to organize and display questions and answers. */}
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>What is IndieTasker, and how does it work?</Accordion.Header>
@@ -64,5 +68,5 @@ function FAQ() {
     </div>
   );
 }
-
+// Exporting the FAQ component for use in other parts of the application.
 export default FAQ;
