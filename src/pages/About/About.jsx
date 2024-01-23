@@ -7,9 +7,9 @@ export default function About() {
     <div className="about">
       <div className="about-content">
         <h2 className="about-heading">About Us</h2>
-        <p className="about-text">
-          Welcome to our website! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel metus vitae orci euismod fermentum at nec ex. Vestibulum maximus, urna vel ultrices dignissim, quam urna varius felis, eu convallis dolor purus ut justo. Sed eu libero non leo lacinia dignissim. Integer auctor sapien eu velit ultrices, et fermentum elit blandit.
-        </p>
+        <div className="about-text">
+        <p>Welcome to IndieTasker - Where Creativity Meets Opportunity!</p> <p>At IndieTasker, we believe in the power of individual talent and the endless possibilities that arise when freelancers come together with clients seeking exceptional services. Launched in [current year], IndieTasker has quickly become the go-to platform for connecting skilled freelancers with diverse project needs. Our journey began with a simple yet powerful vision: to empower freelancers worldwide while providing businesses with access to a vast pool of talented individuals.</p>
+      </div>
       </div>
       <FAQ />
     </div>
