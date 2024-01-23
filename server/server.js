@@ -5,7 +5,7 @@ import sqlite3 from "sqlite3";
 
 app.use(cors());
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Alow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     next();
 });
 app.use(express.json({ limit: "10mb" }));
@@ -31,7 +31,18 @@ app.post("/validatePassword", (req, res) => {
     });
 });
 
-app.listen(3001, "localhost"); // or server.listen(3001, '0.0.0.0'); for all interfaces
-app.on("listening", function () {
-    console.log("Express server started on port %s at %s", server.address().port, server.address().address);
+app.post("/register", (req, res) => {
+    const { username, password, email } = req.body;
+    console.log(req.body);
+    db.run("INSERT INTO credentials(username, password, email) VALUES (?, ?, ?)", [username, password, email], (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("Record inserted successfully");
+        res.send({ success: true });
+    });
+});
+
+app.listen(3001, "localhost", () => {
+    console.log("Express server started on port 3001");
 });
