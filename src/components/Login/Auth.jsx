@@ -23,7 +23,11 @@ export default function Auth() {
     };
 
     return (
-        <div>
+        <div className="login-form">
+            {/* Title for the Login form */}
+            <h2 className="login-title">Login</h2>
+
+            {/* Form component */}
             <Form
                 name="normal_login"
                 className="login-form"
