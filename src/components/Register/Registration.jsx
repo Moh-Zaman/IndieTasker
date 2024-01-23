@@ -19,6 +19,7 @@ function Registration() {
 
     return (
         <div className="registration-form">
+            <h2 className="registration-title">Register</h2>
             <Form
                 name="normal_register"
                 className="registration-form"

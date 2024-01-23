@@ -1,12 +1,12 @@
 /* Registration.css */
 
 .registration-form {
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .site-form-item-icon {
@@ -15,6 +15,11 @@
 
 .login-form-button {
     width: 100%;
+    margin-top: 10px;
 }
 
-/* Add additional styles as needed */
+.registration-title {
+    text-align: center;
+    font-size: 24px;
+    color: #1890ff; 
+}
