@@ -20,27 +20,38 @@ function FAQ() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header>Accordion Item #3</Accordion.Header>
+          <Accordion.Header>How can clients find the right freelancer for their project?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          Clients can search for freelancers based on specific skills, expertise, and project requirements. Additionally, our advanced search filters help narrow down the options. Once a client finds a suitable freelancer, they can review the freelancer's profile, portfolio, and ratings before initiating contact to discuss the project further.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Accordion Item #4</Accordion.Header>
+          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>How are payments handled on IndieTasker?</Accordion.Header>
+          <Accordion.Body>
+          ndieTasker utilizes a secure payment system. Clients make payments through the platform, and funds are held in escrow until the freelancer completes the project to the client's satisfaction. This ensures a fair and transparent process for both parties.          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
