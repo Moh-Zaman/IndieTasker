@@ -9,6 +9,7 @@
     padding: 10px;
     justify-content: space-around;
     margin: 10px;
+    gap: 10px;
 }
 
 .carousel {
@@ -25,11 +26,11 @@
 
 .item {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 12%;
 }
 
 .carousel1 {
-    border: 1px solid black;
+    border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
     display: flex;
@@ -37,7 +38,7 @@
 }
 
 .carousel2 {
-    border: 1px solid black;
+    border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
     display: flex;
@@ -73,6 +74,16 @@
     background-color: #030b2c;
 }
 
+/* Headings - NEEDS WORK*/
+/* .freelancer-type {
+    font-size: large;
+}
+
+.featured-title {
+    font-size: large;
+} */
+
+
 /* Media query for tablets and smaller screens */
 @media only screen and (max-width: 880px) {
     .carousel-container {
@@ -87,11 +98,31 @@
         width: 100%; 
         border-radius: 0;
         margin: 5px;
-        margin-bottom: 10px; 
+        margin-bottom: 5px; 
         border-radius: 10px;
     }
 
     .freelancer-type {
         font-size: 1.5em; 
+    }
+} 
+
+@media only screen and (max-width: 550px) {
+    .carousel-container {
+        margin-top: 10px;
+        margin-bottom: none;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .carousel,
+    .carousel1,
+    .carousel2 {
+        margin-bottom: none; 
+       
+    }
+
+    .item {
+        margin-top: 15%;
     }
 }
