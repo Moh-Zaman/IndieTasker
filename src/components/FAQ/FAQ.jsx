@@ -2,62 +2,71 @@ import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import "./FAQ.css";
 
+// FAQ component to display frequently asked questions using React Bootstrap Accordion.
 function FAQ() {
   return (
     <div className="faq-container">
+      {/* Heading for the FAQ section. */}
       <h2 className="faq-title">Frequently Asked Questions</h2>
+
+      {/* React Bootstrap Accordion component to organize and display questions and answers. */}
       <Accordion>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Accordion Item #1</Accordion.Header>
+          <Accordion.Header>What is IndieTasker, and how does it work?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          IndieTasker is an online platform connecting freelancers with clients seeking a wide range of services. Freelancers showcase their skills and expertise, while clients browse profiles to find the perfect match for their projects. The platform facilitates communication, project collaboration, and secure transactions.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Accordion Item #2</Accordion.Header>
+          <Accordion.Header>How do I get started as a freelancer on IndieTasker?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          To join IndieTasker as a freelancer, simply sign up for an account, create a comprehensive profile highlighting your skills and experience, and start browsing available projects. Be sure to set your rates, availability, and complete your profile to increase your visibility to potential clients.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header>Accordion Item #3</Accordion.Header>
+          <Accordion.Header>How can clients find the right freelancer for their project?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          Clients can search for freelancers based on specific skills, expertise, and project requirements. Additionally, our advanced search filters help narrow down the options. Once a client finds a suitable freelancer, they can review the freelancer's profile, portfolio, and ratings before initiating contact to discuss the project further.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Accordion Item #4</Accordion.Header>
+          <Accordion.Header>Is IndieTasker only for freelancers locally, or can remote work collaborate online?</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          IndieTasker supports both remote and local collaborations. While we encourage local freelancers to support businesses within your community, freelancers can also work remotely with clients, from around the world.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>How are payments handled on IndieTasker?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker utilizes a secure payment system. Clients make payments through the platform, and funds are held in escrow until the freelancer completes the project to the client's satisfaction. This ensures a fair and transparent process for both parties.          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="5">
+          <Accordion.Header>Are there any fees for using IndieTasker?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker is free for freelancers to join and create profiles. For each completed transaction, a service fee is deducted from the freelancer's earnings. Clients are not charged a fee for posting projects.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="6">
+          <Accordion.Header>How do I ensure the security of my information on IndieTasker?</Accordion.Header>
+          <Accordion.Body>
+          IndieTasker prioritizes the security of user information. We use industry-standard encryption and take measures to protect user data. It's essential to follow best practices for online security, such as using unique passwords and enabling two-factor authentication.
+        </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="7">
+          <Accordion.Header>Can I hire multiple freelancers for a single project?</Accordion.Header>
+          <Accordion.Body>
+          This is currently not possible but we are aiming to add this feature in the future.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>How can I contact IndieTasker's support team?</Accordion.Header>
+          <Accordion.Body>
+          For any questions or issues, feel free to reach out to our support team through the contact form on the website. We are dedicated to providing timely assistance and ensuring a positive experience for both freelancers and clients.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </div>
   );
 }
-
+// Exporting the FAQ component for use in other parts of the application.
 export default FAQ;
