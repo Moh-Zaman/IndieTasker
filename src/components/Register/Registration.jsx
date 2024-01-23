@@ -1,13 +1,14 @@
-import "./Registration.css";
-
 import { Form, Input, Button, Radio } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 
+// Registration component definition
 function Registration() {
+    // Function to handle registration authentication
     function regAuth(value) {
         const { username, password, confirm, email } = value;
 
+        // Checking if passwords match and making a registration request
         if (password === confirm) {
             axios.post("http://localhost:3001/register", { username, password, email }).then(() => {
                 alert("Registered!");
@@ -16,10 +17,12 @@ function Registration() {
             alert("Passwords don't match!");
         }
     }
-
     return (
         <div className="registration-form">
+            {/* Title for the registration form */}
             <h2 className="registration-title">Register</h2>
+
+            {/* Form component */}
             <Form
                 name="normal_register"
                 className="registration-form"
@@ -27,6 +30,7 @@ function Registration() {
                     remember: true,
                 }}
                 onFinish={regAuth}>
+                {/* Form input for username */}
                 <Form.Item
                     name="username"
                     rules={[
@@ -37,6 +41,8 @@ function Registration() {
                     ]}>
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                 </Form.Item>
+
+                {/* Form input for email */}
                 <Form.Item
                     name="email"
                     rules={[
@@ -47,16 +53,20 @@ function Registration() {
                     ]}>
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} type="email" placeholder="Email Address" />
                 </Form.Item>
+
+                {/* Form input for password */}
                 <Form.Item
                     name="password"
                     rules={[
                         {
                             required: true,
-                            message: "Please entere your desired password.",
+                            message: "Please enter your desired password.",
                         },
                     ]}>
                     <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
                 </Form.Item>
+
+                {/* Form input for confirming password */}
                 <Form.Item
                     name="confirm"
                     rules={[
@@ -68,8 +78,10 @@ function Registration() {
                     <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Confirm Password" />
                 </Form.Item>
 
+                {/* Section indicating user type */}
                 <div className="login-redirect">I am a:</div>
                 
+                {/* Radio buttons for selecting user type */}
                 <Radio.Group
                     rules={[
                         {
@@ -81,10 +93,13 @@ function Registration() {
                     <Radio value="freelancer">Freelancer</Radio>
                 </Radio.Group>
 
+                {/* Form submission button */}
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Register
                     </Button>
+
+                    {/* Link to login page */}
                     <p className="spacing">Already registered? <a href="/login">login here!</a></p>
                 </Form.Item>
             </Form>
