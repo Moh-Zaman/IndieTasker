@@ -1,23 +1,31 @@
 import "./Registration.css";
 
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button, Radio } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 
 function Registration() {
-    function authReg() {
-        console.log("Worked");
+    function regAuth(value) {
+        const { username, password, confirm, email } = value;
+
+        if (password === confirm) {
+            axios.post("http://localhost:3001/register", { username, password, email }).then(() => {
+                alert("Registered!");
+            });
+        } else {
+            alert("Passwords don't match!");
+        }
     }
 
     return (
-        <div>
+        <div className="registration-form">
             <Form
                 name="normal_register"
                 className="registration-form"
                 initialValues={{
                     remember: true,
                 }}
-                onFinish={authReg}>
+                onFinish={regAuth}>
                 <Form.Item
                     name="username"
                     rules={[
@@ -49,7 +57,7 @@ function Registration() {
                     <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
                 </Form.Item>
                 <Form.Item
-                    name="confirm_password"
+                    name="confirm"
                     rules={[
                         {
                             required: true,
@@ -58,6 +66,18 @@ function Registration() {
                     ]}>
                     <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Confirm Password" />
                 </Form.Item>
+
+                <p>I am a:</p>
+                <Radio.Group
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please tell us what you are!",
+                        },
+                    ]}>
+                    <Radio value="client">Client</Radio>
+                    <Radio value="freelancer">Freelancer</Radio>
+                </Radio.Group>
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="login-form-button">
