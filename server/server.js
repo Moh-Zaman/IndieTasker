@@ -32,9 +32,9 @@ app.post("/validatePassword", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-    const { username, password, email } = req.body;
+    const { username, password, email, accType } = req.body;
     console.log(req.body);
-    db.run("INSERT INTO credentials(username, password, email) VALUES (?, ?, ?)", [username, password, email], (err) => {
+    db.run("INSERT INTO credentials(username, password, email, accType) VALUES (?, ?, ?, ?)", [username, password, email, accType], (err) => {
         if (err) {
             throw err;
         }

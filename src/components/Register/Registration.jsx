@@ -1,23 +1,33 @@
 import "./Registration.css";
+
+import { useState } from "react";
 import { Form, Input, Button, Radio } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 
 // Registration component definition
 function Registration() {
+    const [userInfo, setUserInfo] = useState({
+        username: "",
+        password: "",
+        email: "",
+        accType: "",
+    });
+
     // Function to handle registration authentication
     function regAuth(value) {
-        const { username, password, confirm, email } = value;
+        const { username, password, confirm, email, accType } = value;
 
         // Checking if passwords match and making a registration request
         if (password === confirm) {
-            axios.post("http://localhost:3001/register", { username, password, email }).then(() => {
+            axios.post("http://localhost:3001/register", { username, password, email, accType }).then(() => {
                 alert("Registered!");
             });
         } else {
             alert("Passwords don't match!");
         }
     }
+
     return (
         <div className="registration-form">
             {/* Title for the registration form */}
@@ -33,7 +43,7 @@ function Registration() {
                 onFinish={regAuth}>
                 {/* Form input for username */}
                 <Form.Item
-                    name="username"
+                    name={userInfo.username}
                     rules={[
                         {
                             required: true,
@@ -57,7 +67,7 @@ function Registration() {
 
                 {/* Form input for password */}
                 <Form.Item
-                    name="password"
+                    name={userInfo.password}
                     rules={[
                         {
                             required: true,
@@ -81,7 +91,7 @@ function Registration() {
 
                 {/* Section indicating user type */}
                 <div className="login-redirect">I am a:</div>
-                
+
                 {/* Radio buttons for selecting user type */}
                 <Radio.Group
                     rules={[
@@ -101,7 +111,9 @@ function Registration() {
                     </Button>
 
                     {/* Link to login page */}
-                    <p className="spacing">Already registered? <a href="/login">Login here!</a></p>
+                    <p className="spacing">
+                        Already registered? <a href="/login">Login here!</a>
+                    </p>
                 </Form.Item>
             </Form>
         </div>
