@@ -54,6 +54,12 @@ function FAQ() {
           This is currently not possible but we are aim to add this feature in the future.
           </Accordion.Body>
         </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>How can I contact IndieTasker's support team?</Accordion.Header>
+          <Accordion.Body>
+          For any questions or issues, feel free to reach out to our support team through the contact form on the website. We are dedicated to providing timely assistance and ensuring a positive experience for both freelancers and clients.
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
     </div>
   );
