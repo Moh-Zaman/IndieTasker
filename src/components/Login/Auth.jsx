@@ -3,7 +3,7 @@ import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Nav } from "react-bootstrap/esm";
+import "./Auth.css";
 
 export default function Auth() {
     let loginSuccessful;
