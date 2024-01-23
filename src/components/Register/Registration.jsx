@@ -9,6 +9,8 @@ import axios from "axios";
 function Registration() {
     const [userInfo, setUserInfo] = useState({
         username: "",
+        firstname: "",
+        lastname: "",
         password: "",
         confirm: "",
         email: "",
@@ -23,9 +25,21 @@ function Registration() {
         }
         // Checking if passwords match and making a registration request
         if (userInfo.password === userInfo.confirm) {
-            axios.post("http://localhost:3001/register", { username: userInfo.username, password: userInfo.password, email: userInfo.email, accType: userInfo.accType }).then(() => {
-                alert("Registered!");
-            });
+            axios
+                .post("http://localhost:3001/register", {
+                    username: userInfo.username,
+                    password: userInfo.password,
+                    email: userInfo.email,
+                    accType: userInfo.accType,
+                    firstname: userInfo.firstname,
+                    lastname: userInfo.lastname,
+                })
+                .then(() => {
+                    alert("Registered!");
+                })
+                .catch(function (error) {
+                    alert(error);
+                });
         } else {
             alert("Passwords don't match!");
             return;
@@ -55,6 +69,28 @@ function Registration() {
                         },
                     ]}>
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                </Form.Item>
+
+                <Form.Item
+                    onChange={(e) => setUserInfo({ ...userInfo, firstname: e.target.value })}
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please enter your first name.",
+                        },
+                    ]}>
+                    <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="First Name" />
+                </Form.Item>
+
+                <Form.Item
+                    onChange={(e) => setUserInfo({ ...userInfo, lastname: e.target.value })}
+                    rules={[
+                        {
+                            required: true,
+                            message: "Please enter your last name.",
+                        },
+                    ]}>
+                    <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Last Name" />
                 </Form.Item>
 
                 {/* Form input for email */}
