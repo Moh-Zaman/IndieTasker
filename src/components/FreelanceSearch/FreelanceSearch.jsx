@@ -20,6 +20,8 @@ function FreelanceSearch() {
     } else if (searchValue !== null) {
         filteredUsers = users.filter(user => user.name.first == `${searchValue}`)
     }
+
+    
     
   return (
     <div className="search-container" style={{ backgroundColor: '#eee' }}>
@@ -48,7 +50,7 @@ function FreelanceSearch() {
                         <a href={"https://twitter.com/" + item.twitter}><MDBIcon fab icon="twitter" size="lg" /></a>
                     </MDBBtn>
                     </div>
-                    <MDBBtn rounded size="lg">
+                    <MDBBtn href={`/gigs?id=${item.id}`} rounded size="lg">
                     Hire Tasker
                     </MDBBtn>
                     <div className="d-flex justify-content-between text-center mt-5 mb-2">
