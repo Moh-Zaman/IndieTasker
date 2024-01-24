@@ -42,7 +42,7 @@ function Hero() {
     const handleSearchSubmit = () => {
         if (selectedOption === 'country'){
             navigate(`/tasker?country=${searchValue}`)
-        } else if (selectedOption === 'all') {
+        } else if (selectedOption === 'name') {
             navigate(`/tasker?search=${searchValue}`)
         } else if (selectedOption === 'job') {
             navigate(`/tasker?job=${searchValue}`)
@@ -62,8 +62,8 @@ function Hero() {
                     </div>
                     <div className="radio-inputs">
                         <label className="radio">
-                            <input type="radio" name="radio" value="all" checked={selectedOption === 'all'} onChange={handleOptionChange}/>
-                            <span className="name">All</span>
+                            <input type="radio" name="radio" value="name" checked={selectedOption === 'name'} onChange={handleOptionChange}/>
+                            <span className="name">Name</span>
                         </label>
                         <label className="radio">
                             <input type="radio" name="radio" value="country" checked={selectedOption === 'country'} onChange={handleOptionChange}/>

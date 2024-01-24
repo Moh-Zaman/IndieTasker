@@ -17,6 +17,8 @@ function FreelanceSearch() {
         filteredUsers = users.filter(user => user.country == `${countryValue}`)
     } else if (jobValue !== null) {
         filteredUsers = users.filter(user => user.jobTitle == `${jobValue}`)
+    } else if (searchValue !== null) {
+        filteredUsers = users.filter(user => user.name.first == `${searchValue}`)
     }
     
   return (
