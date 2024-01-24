@@ -20,9 +20,14 @@ import {
 
 import users from "../../data/profile.json"
 
+// For Maps
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { useMemo } from "react";
+
+
 function Profile() {
 
-    function getRandomUserArr(usersArr) {
+        function getRandomUserArr(usersArr) {
         const ranIndex = Math.floor(Math.random() * users.length)
 
         return usersArr[ranIndex]
@@ -30,7 +35,16 @@ function Profile() {
 
     const randomUser = getRandomUserArr(users);
 
-    console.log(randomUser)
+    const randomUserLat = parseInt(randomUser.latitude)
+    const randomUserLng = parseInt(randomUser.longitude)
+
+    console.log(randomUserLat, randomUserLng)
+
+    const { isLoaded } = useLoadScript({
+      googleMapsApiKey: "AIzaSyBLe7vdeUj-k2dbU8NU_YW4Kq0xwN93J3w",
+    });
+
+    const center = useMemo(() => ({ lat: randomUserLat, lng: randomUserLng }), []);
 
     return (
     <section style={{ backgroundColor: '#eee' }}>
@@ -194,6 +208,16 @@ function Profile() {
               </MDBCol>
             </MDBRow>
           </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <div className="googleMaps">
+            {!isLoaded ? (<h1>Loading...</h1>) : 
+            (
+            <GoogleMap mapContainerClassName="maps-container" center={center} zoom={10}>
+              <Marker position={center} />
+            </GoogleMap>
+            )}
+          </div>
         </MDBRow>
       </MDBContainer>
     </section>
