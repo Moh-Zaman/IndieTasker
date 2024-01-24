@@ -5,7 +5,7 @@ import { useMemo } from "react";
 
 import "./GoogleMaps.css"
 
-function GoogleMaps() {
+function Maps() {
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyBLe7vdeUj-k2dbU8NU_YW4Kq0xwN93J3w",
@@ -16,11 +16,11 @@ function GoogleMaps() {
     <div className="googleMaps">
         {!isLoaded ? (<h1>Loading...</h1>) : 
         (
-        <GoogleMap mapContainerClassName="maps-container" center={center} zoom={100}>
+        <GoogleMap mapContainerClassName="maps-container" center={center} zoom={3}>
         </GoogleMap>
         )}
     </div>
     );
 }
 
-export default GoogleMaps
+export default Maps

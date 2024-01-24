@@ -1,9 +1,11 @@
-import React from 'react'
 import FreelanceSearch from '../../components/FreelanceSearch/FreelanceSearch'
 
 function Search() {
+
   return (
+    <div>
       <FreelanceSearch />
+    </div>
   )
 }
 
