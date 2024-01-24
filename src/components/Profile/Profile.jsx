@@ -55,8 +55,8 @@ function Profile() {
                   className="rounded-circle"
                   style={{ width: '150px' }}
                   fluid />
-                <p className="text-muted mb-1">Full Stack Developer</p>
-                <p className="text-muted mb-4">{randomUser.address}</p>
+                <p className="text-muted mb-1">{randomUser.jobTitle}</p>
+                <p className="text-muted mb-4">{randomUser.country}</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Follow</MDBBtn>
                   <MDBBtn outline className="ms-1">Message</MDBBtn>
@@ -95,7 +95,7 @@ function Profile() {
                     <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{randomUser.name}</MDBCardText>
+                    <MDBCardText className="text-muted">{randomUser.name.first + " " + randomUser.name.last}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -119,10 +119,10 @@ function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Address</MDBCardText>
+                    <MDBCardText>Country</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{randomUser.address}</MDBCardText>
+                    <MDBCardText className="text-muted">{randomUser.country}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
