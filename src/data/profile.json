@@ -16,7 +16,8 @@
       "twitter": "alice_tweets",
       "instagram": "alice_gram",
       "project1": "Machine Learning for Predictive Analytics",
-      "project2": "Big Data Analysis for Healthcare"
+      "project2": "Big Data Analysis for Healthcare",
+      "category": "Data Science & Analysis"
     },
     {
       "id": "2",
@@ -35,7 +36,8 @@
       "twitter": "david_tweets",
       "instagram": "david_code",
       "project1": "Web Application Development with React",
-      "project2": "API Integration for E-commerce Platforms"
+      "project2": "API Integration for E-commerce Platforms",
+      "category": "Full Stack Developers"
     },
     {
       "id": "3",
@@ -54,7 +56,8 @@
       "twitter": "maria_designer",
       "instagram": "maria_uiux",
       "project1": "Mobile App Redesign for Better User Experience",
-      "project2": "Responsive Web Design for E-commerce"
+      "project2": "Responsive Web Design for E-commerce",
+      "category": "UX/UI Experts"
     },
     {
       "id": "4",
@@ -73,7 +76,8 @@
       "twitter": "james_tweets",
       "instagram": "james_code",
       "project1": "E-commerce Platform Development",
-      "project2": "Real-time Chat Application"
+      "project2": "Real-time Chat Application",
+      "category": "Full Stack Developers"
     },
     {
       "id": "5",
@@ -92,7 +96,8 @@
       "twitter": "emily_cyber",
       "instagram": "emily_secure",
       "project1": "Network Security Enhancement",
-      "project2": "Incident Response Planning"
+      "project2": "Incident Response Planning",
+      "category": "Data Science & Analysis"
     },
     {
       "id": "6",
@@ -111,7 +116,8 @@
       "twitter": "daniel_ml",
       "instagram": "daniel_code",
       "project1": "Natural Language Processing for Chatbots",
-      "project2": "Image Recognition for Autonomous Vehicles"
+      "project2": "Image Recognition for Autonomous Vehicles",
+      "category": "AI & Machine Learning"
     },
     {
       "id": "7",
@@ -130,7 +136,9 @@
       "twitter": "sophia_pm",
       "instagram": "sophia_product",
       "project1": "Agile Product Development for SaaS",
-      "project2": "Market Research for New Product Launch"
+      "project2": "Market Research for New Product Launch",
+      "category": "Data Science & Analysis"
+      
     },
     {
       "id": "8",
@@ -149,7 +157,8 @@
       "twitter": "jonathan_devops",
       "instagram": "jonathan_deploy",
       "project1": "Continuous Integration/Deployment Pipeline Setup",
-      "project2": "Infrastructure as Code for Cloud Platforms"
+      "project2": "Infrastructure as Code for Cloud Platforms",
+      "category": "Full Stack Developers"
     },
     {
       "id": "9",
@@ -168,7 +177,8 @@
       "twitter": "isabella_data",
       "instagram": "isabella_data",
       "project1": "Data Warehousing and ETL Pipeline",
-      "project2": "Big Data Processing with Apache Spark"
+      "project2": "Big Data Processing with Apache Spark",
+      "category": "Data Science & Analysis"
     },
     {
       "id": "10",
@@ -187,7 +197,8 @@
       "twitter": "liam_frontend",
       "instagram": "liam_frontend",
       "project1": "Responsive Web Design with CSS Grid",
-      "project2": "Single Page Application with React"
+      "project2": "Single Page Application with React",
+      "category": "Front End Developers"
     },
     {
       "id": "11",
@@ -206,7 +217,8 @@
       "twitter": "olivia_design",
       "instagram": "olivia_graphics",
       "project1": "Branding and Logo Design",
-      "project2": "Print and Digital Media Design"
+      "project2": "Print and Digital Media Design",
+      "category": "Designers & Artists"
     },
     {
       "id": "12",
@@ -225,7 +237,8 @@
       "twitter": "ethan_backend",
       "instagram": "ethan_code",
       "project1": "RESTful API Development with Node.js",
-      "project2": "Database Optimization and Query Performance"
+      "project2": "Database Optimization and Query Performance",
+      "category": "Front End Developers"
     },
     {
       "id": "13",
@@ -244,7 +257,8 @@
       "twitter": "ava_research",
       "instagram": "ava_ml",
       "project1": "Deep Learning for Image Recognition",
-      "project2": "Reinforcement Learning for Robotics"
+      "project2": "Reinforcement Learning for Robotics",
+      "category": "Data Science & Analysis"
     },
     {
       "id": "14",
@@ -263,7 +277,8 @@
       "twitter": "mia_marketing",
       "instagram": "mia_digital",
       "project1": "Social Media Campaign for Brand Awareness",
-      "project2": "SEO Strategy for E-commerce"
+      "project2": "SEO Strategy for E-commerce",
+      "category": "Designers & Artists"
     },
     {
       "id": "15",
@@ -282,7 +297,8 @@
       "twitter": "noah_pm",
       "instagram": "noah_project",
       "project1": "Infrastructure Upgrade for Scalability",
-      "project2": "Agile Software Development Coordination"
+      "project2": "Agile Software Development Coordination",
+      "category": "Full Stack Developers"
     },
     {
       "id": "16",
@@ -301,7 +317,8 @@
       "twitter": "lily_testing",
       "instagram": "lily_qa",
       "project1": "Automated Testing Framework Implementation",
-      "project2": "User Acceptance Testing for Software Release"
+      "project2": "User Acceptance Testing for Software Release",
+      "category": "Data Science & Analysis"
     },
     {
       "id": "17",
@@ -320,7 +337,8 @@
       "twitter": "jackson_architect",
       "instagram": "jackson_systems",
       "project1": "Enterprise-level System Integration",
-      "project2": "Cloud Infrastructure Design for Scalability"
+      "project2": "Cloud Infrastructure Design for Scalability",
+      "category": "Full Stack Developers"
     },
     {
       "id": "18",
@@ -339,7 +357,8 @@
       "twitter": "grace_designer",
       "instagram": "grace_uiux",
       "project1": "Mobile App Redesign for Enhanced User Experience",
-      "project2": "Responsive Web Design for Financial Applications"
+      "project2": "Responsive Web Design for Financial Applications",
+      "category": "UX/UI Experts"
     },
     {
       "id": "19",
@@ -358,7 +377,8 @@
       "twitter": "logan_blockchain",
       "instagram": "logan_code",
       "project1": "Smart Contracts Development for Decentralized Applications",
-      "project2": "Cryptocurrency Wallet Integration"
+      "project2": "Cryptocurrency Wallet Integration",
+      "category": "Full Stack Developers"
     },
     {
         "id": "20",
@@ -377,7 +397,8 @@
         "twitter": "sophie_dev",
         "instagram": "sophie_code",
         "project1": "Cross-Platform App Development",
-        "project2": "Augmented Reality Integration"
+        "project2": "Augmented Reality Integration",
+        "category": "AI & Machine Learning"
     },
     {
         "id": "21",
@@ -396,7 +417,8 @@
         "twitter": "elijah_data",
         "instagram": "elijah_analyze",
         "project1": "Statistical Analysis for Business Insights",
-        "project2": "Data Visualization Dashboard Creation"
+        "project2": "Data Visualization Dashboard Creation",
+        "category": "Data Science & Analysis"
     },
     {
         "id": "22",
@@ -415,7 +437,8 @@
         "twitter": "hannah_designer",
         "instagram": "hannah_uiux",
         "project1": "Interactive Prototype Design",
-        "project2": "User-Centric Website Redesign"
+        "project2": "User-Centric Website Redesign",
+        "category": "UX/UI Experts"
     },
     {
         "id": "23",
@@ -434,7 +457,8 @@
         "twitter": "caleb_tweets",
         "instagram": "caleb_code",
         "project1": "E-commerce Website Optimization",
-        "project2": "Microservices Architecture Implementation"
+        "project2": "Microservices Architecture Implementation",
+        "category": "Full Stack Developers"
     },
     {
         "id": "24",
@@ -453,7 +477,8 @@
         "twitter": "aria_ml",
         "instagram": "aria_code",
         "project1": "Sentiment Analysis for Social Media",
-        "project2": "Recommendation System Development"
+        "project2": "Recommendation System Development",
+        "category": "AI & Machine Learning"
     },
     {
         "id": "25",
@@ -472,7 +497,8 @@
         "twitter": "nathan_cyber",
         "instagram": "nathan_secure",
         "project1": "Penetration Testing for Network Security",
-        "project2": "Security Incident Response Planning"
+        "project2": "Security Incident Response Planning",
+        "category": "Data Science & Analysis"
     },
     {
         "id": "26",
@@ -491,7 +517,8 @@
         "twitter": "eva_frontend",
         "instagram": "eva_frontend",
         "project1": "Responsive Web Design with CSS Flexbox",
-        "project2": "Progressive Web App Development"
+        "project2": "Progressive Web App Development",
+        "category": "Front End Developers"
     },
     {
         "id": "27",
@@ -510,7 +537,8 @@
         "twitter": "lucas_devops",
         "instagram": "lucas_deploy",
         "project1": "Containerization with Docker and Kubernetes",
-        "project2": "Automated Deployment with Jenkins"
+        "project2": "Automated Deployment with Jenkins",
+        "category": "AI & Machine Learning"
     },
     {
         "id": "28",
@@ -529,7 +557,8 @@
         "twitter": "scarlett_data",
         "instagram": "scarlett_data",
         "project1": "ETL Pipeline for Big Data Processing",
-        "project2": "Data Governance and Quality Assurance"
+        "project2": "Data Governance and Quality Assurance",
+        "category": "Data Science & Analysis"
     },
     {
         "id": "29",
@@ -548,7 +577,8 @@
         "twitter": "henry_backend",
         "instagram": "henry_code",
         "project1": "Database Schema Design and Optimization",
-        "project2": "RESTful API Development with Express.js"
+        "project2": "RESTful API Development with Express.js",
+        "category": "Full Stack Developers"
     },
     {
         "id": "30",
@@ -567,7 +597,8 @@
         "twitter": "leah_research",
         "instagram": "leah_ml",
         "project1": "Natural Language Processing for Chatbot Conversations",
-        "project2": "Generative Adversarial Networks for Image Synthesis"
+        "project2": "Generative Adversarial Networks for Image Synthesis",
+        "category": "AI & Machine Learning"
     },
     {
         "id": "31",
@@ -586,7 +617,8 @@
         "twitter": "nicholas_marketing",
         "instagram": "nicholas_digital",
         "project1": "Content Marketing Strategy for B2B",
-        "project2": "Email Marketing Automation for Lead Generation"
+        "project2": "Email Marketing Automation for Lead Generation",
+        "category": "Designers & Artists"
     },
     {
         "id": "32",
@@ -605,7 +637,8 @@
         "twitter": "penelope_pm",
         "instagram": "penelope_project",
         "project1": "Digital Transformation Project Implementation",
-        "project2": "Project Portfolio Management for IT"
+        "project2": "Project Portfolio Management for IT",
+        "category": "Data Science & Analysis"
     },
     {
         "id": "33",
@@ -624,7 +657,8 @@
         "twitter": "owen_testing",
         "instagram": "owen_qa",
         "project1": "Automated Test Script Development",
-        "project2": "Performance Testing for Scalable Systems"
+        "project2": "Performance Testing for Scalable Systems",
+        "category": "Data Science & Analysis"
     },
     {
         "id": "34",
@@ -643,7 +677,8 @@
         "twitter": "layla_architect",
         "instagram": "layla_systems",
         "project1": "Cloud-native Application Architecture",
-        "project2": "Microservices Design for Scalable Systems"
+        "project2": "Microservices Design for Scalable Systems",
+        "category": "Full Stack Developers"
     },
     {
         "id": "35",
@@ -662,7 +697,8 @@
         "twitter": "eli_designer",
         "instagram": "eli_uiux",
         "project1": "Mobile App Interface Design for Accessibility",
-        "project2": "User-Centered Design for Financial Applications"
+        "project2": "User-Centered Design for Financial Applications",
+        "category": "UX/UI Experts"
     },
     {
         "id": "36",
@@ -681,7 +717,8 @@
         "twitter": "hudson_blockchain",
         "instagram": "hudson_code",
         "project1": "Smart Contracts Development for Tokenization",
-        "project2": "Decentralized Identity Management with Blockchain"
+        "project2": "Decentralized Identity Management with Blockchain",
+        "category": "Full Stack Developers"
     },
     {
         "id": "37",
@@ -700,7 +737,8 @@
         "twitter": "stella_ai",
         "instagram": "stella_code",
         "project1": "Neural Network Implementation for Image Recognition",
-        "project2": "Reinforcement Learning for Autonomous Systems"
+        "project2": "Reinforcement Learning for Autonomous Systems",
+        "category": "AI & Machine Learning"
     },
     {
         "id": "38",
@@ -719,7 +757,8 @@
         "twitter": "leo_tweets",
         "instagram": "leo_code",
         "project1": "Cross-Platform Mobile App Development",
-        "project2": "Cloud-based Software Architecture"
+        "project2": "Cloud-based Software Architecture",
+        "category": "Full Stack Developers"
     }
 ]
            
