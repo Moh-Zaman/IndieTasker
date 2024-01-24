@@ -34,13 +34,7 @@ function Navbar() {
           </li>
           <li>
             <a href="/tasker">All Taskers</a>
-          </li>
-          <li>
-            <a href="/gigs">Gigs</a>
-          </li>
-          <li>
-            <a href="/profile">My Profile</a>
-          </li>          
+          </li>        
           <li>
             <a className="sign-up-button" href="/register">
               Sign Up
