@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import info from "../../data/profile.json";
 import "./FreelancerCard.css";
+import { useNavigate } from "react-router-dom";
 
 function FreelancerCard() {
   const [users, setUsers] = useState([]);
   const [apiCallCount, setApiCallCount] = useState(0);
   const [randomUser, setRandomUser] = useState(getRandomUserArr(info));
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +26,7 @@ function FreelancerCard() {
           console.error("Error fetching data:", error);
         }
       } else {
-        console.log("Reached the limit of 9 API calls");
+        console.log("Reached the limit of 1 API call");
       }
     };
 
@@ -41,22 +44,26 @@ function FreelancerCard() {
 
   const handleButtonClick = (event) => {
     event.preventDefault();
+    navigate("/tasker");
+    window.scrollTo(0, 0);
   };
 
-  const displaylist = users.map((user, index) => (
-    <div key={index} className="freelancer-card">
-      <h3 className="freelancer-card-title">{user.name.first + " " + user.name.last}</h3>
-      <img className="freelancer-card-image" src={user.picture.large} alt="" />
-      <div className="freelancer-card-body">
-        <p className="freelancer-card-text">{randomUser.jobTitle}</p>
-        <button className="freelancer-card-button" onClick={handleButtonClick}>
-          Hire Me
-        </button>
-      </div>
+  return (
+    <div>
+      {users.map((user, index) => (
+        <div key={index} className="freelancer-card">
+          <h3 className="freelancer-card-title">{user.name.first + " " + user.name.last}</h3>
+          <img className="freelancer-card-image" src={user.picture.large} alt="" />
+          <div className="freelancer-card-body">
+            <p className="freelancer-card-text">{randomUser.jobTitle}</p>
+            <button className="freelancer-card-button" onClick={handleButtonClick}>
+              Hire Us
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
-  ));
-
-  return <div>{displaylist}</div>;
+  );
 }
 
 export default FreelancerCard;
