@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.carousel-container {
+.carousel-slide-container {
     display: flex;
     touch-action: none;
     user-select: none;
@@ -12,7 +12,7 @@
     gap: 10px;
 }
 
-.carousel {
+.carousel-slide {
     display: flex;
     position: relative;
     justify-content: center;
