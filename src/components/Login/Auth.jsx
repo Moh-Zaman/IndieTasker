@@ -15,6 +15,8 @@ export default function Auth() {
         // Sending a request to validate the password
         axios.post("http://localhost:3001/validatePassword", { username, password }).then((res) => {
             if (res.data.validation) {
+                // Set cookie to username
+                document.cookie = `user_key=${username}`;
                 navigate("/profile");
             } else {
                 alert("Password bad!");
