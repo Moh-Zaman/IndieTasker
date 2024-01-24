@@ -31,6 +31,12 @@
     },
     {
         "id": 6,
+        "title": "Social Media Marketing",
+        "desc": "Let's get your brand online",
+        "img": "https://unsplash.com/photos/people-using-phone-while-standing-qZenO_gQ7QA"
+    },
+    {
+        "id": 7,
         "title": "3D Modelling",
         "desc": "Assets designed for you!",
         "img": "https://source.unsplash.com/800x600/?technology"
