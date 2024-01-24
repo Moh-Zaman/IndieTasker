@@ -52,7 +52,7 @@ function Hero() {
     return (
         <div className="hero-container">
             <div className="row hero-row hero-image">
-            <img src="./assets/Hero/Banner-png/1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
+                <img src="./assets/Hero/Banner-png/1600x500HeroBanner(withFilter).png" alt="Hero banner collage" />
                 <div className="col-4 hero-inputs">
                     <div className="hero-search">
                         <input className="hero-searchTextOpen" type="text" value={searchValue} name="" placeholder="Search for a Tasker" onChange={(e) => handleSearchChange(e.target.value)} />
@@ -77,7 +77,7 @@ function Hero() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Hero;
