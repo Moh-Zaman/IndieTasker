@@ -1,38 +1,39 @@
 [
     {
         "id": 1,
-        "title": "AI Artists",
-        "desc": "Add Talent to AI",
-        "img": "https://source.unsplash.com/800x600/?freelancer"
-    },
-    {
-        "id": 2,
-        "title": "Logo Design",
-        "desc": "Build your brand",
+        "title": "Designers & Artists",
+        "desc": "Gorgeous assets and designs for your needs",
         "img": "https://source.unsplash.com/800x600/?remote-work"
     },
     {
+        "id": 2,
+        "title": "Data Science & Analysis",
+        "desc": "Data and research - this is your team",
+        "img": "https://source.unsplash.com/800x600/?freelancer"
+    },
+    {
         "id": 3,
-        "title": "WordPress",
-        "desc": "Customize your site",
+        "title": "Front End Developers",
+        "desc": "Gorgeous, function code for the web",
         "img": "https://source.unsplash.com/800x600/?workspace"
     },
     {
         "id": 4,
-        "title": "Developers",
-        "desc": "Top people in their fields",
+        "title": "Full Stack Developers",
+        "desc": "Build anything and everything",
         "img": "https://source.unsplash.com/800x600/?coding"
     },
     {
         "id": 5,
-        "title": "Project Management",
-        "desc": "Industry Experts to manage your projects",
+        "title": "UX/UI Experts",
+        "desc": "Expert UX/UI for your needs",
         "img": "https://source.unsplash.com/800x600/?business-meeting"
     },
     {
         "id": 6,
-        "title": "3D Modelling",
-        "desc": "Assets designed for you!",
+        "title": "AI & Machine Learning",
+        "desc": "Industry leaders for you",
         "img": "https://source.unsplash.com/800x600/?technology"
-    }   
+    }
+
 ]
