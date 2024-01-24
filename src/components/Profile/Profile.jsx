@@ -1,4 +1,4 @@
-import React from "react";
+import axios from "axios";
 import "./Profile.css";
 import {
     MDBCol,
@@ -22,7 +22,7 @@ import users from "../../data/profile.json";
 
 // For Maps
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 
 function Profile() {
     const location = useLocation();
@@ -35,7 +35,12 @@ function Profile() {
         if (parts.length === 2) return parts.pop().split(";").shift();
     }
     // Return profile data based on cookie name
-    console.log(getCookie("user_key"));
+    useEffect(() => {
+        const cookie = { user_key: getCookie("user_key") };
+        axios.post("http://localhost:3001/getUser", cookie).then((res) => {
+            console.log(res.data[0]);
+        });
+    }, []);
 
     // Display profile from gigs
     let filteredUsers = users.filter(user => user.id == `${searchValue}`)
