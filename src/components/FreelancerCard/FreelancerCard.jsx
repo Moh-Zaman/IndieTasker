@@ -1,37 +1,62 @@
-import "./FreelancerCard.css";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import info from "../../data/profile.json";
+import "./FreelancerCard.css";
 
 function FreelancerCard() {
-    const [Users, setUsers] = useState([]);
-    useEffect(() => {
-        axios
-            .get("https://randomuser.me/api/?results=1")
-            .then((Response) => {
-                if (Response.data) {
-                    console.log("Found");
-                    setUsers(Response.data.results);
-                } else {
-                    console.log("not found");
-                }
-            })
-            .catch((error) => console.log(error));
-    }, []);
+  const [users, setUsers] = useState([]);
+  const [apiCallCount, setApiCallCount] = useState(0);
+  const [randomUser, setRandomUser] = useState(getRandomUserArr(info));
 
-    const displaylist = Users.map((User, index) => {
-        return (
-            <div key={index} className="freelancer-card">
-                <h3 className="freelancer-card-title">{User.name.first + " " + User.name.last}</h3>
-                <img className="freelancer-card-image" src={User.picture.large} alt="" />
-                <div className="freelancer-card-body">
-                    <p className="freelancer-card-text">{User.email}</p>
-                    <button className="freelancer-card-button">Hire Me</button>
-                </div>
-            </div>
-        );
-    });
+  useEffect(() => {
+    const fetchData = async () => {
+      if (apiCallCount < 1) {
+        try {
+          const response = await axios.get("https://randomuser.me/api/?results=1");
+          if (response.data.results) {
+            setUsers((prevUsers) => [...prevUsers, ...response.data.results]);
+            setApiCallCount((prevCount) => prevCount + 1);
+          } else {
+            console.log("No results found");
+          }
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      } else {
+        console.log("Reached the limit of 9 API calls");
+      }
+    };
 
-    return <div>{displaylist}</div>;
+    fetchData();
+  }, [apiCallCount]);
+
+  useEffect(() => {
+    setRandomUser(getRandomUserArr(info));
+  }, [users]);
+
+  function getRandomUserArr(usersArr) {
+    const ranIndex = Math.floor(Math.random() * 10);
+    return usersArr[ranIndex];
+  }
+
+  const handleButtonClick = (event) => {
+    event.preventDefault();
+  };
+
+  const displaylist = users.map((user, index) => (
+    <div key={index} className="freelancer-card">
+      <h3 className="freelancer-card-title">{user.name.first + " " + user.name.last}</h3>
+      <img className="freelancer-card-image" src={user.picture.large} alt="" />
+      <div className="freelancer-card-body">
+        <p className="freelancer-card-text">{randomUser.jobTitle}</p>
+        <button className="freelancer-card-button" onClick={handleButtonClick}>
+          Hire Me
+        </button>
+      </div>
+    </div>
+  ));
+
+  return <div>{displaylist}</div>;
 }
 
 export default FreelancerCard;
