@@ -3,12 +3,10 @@ import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Auth.css";  // Importing the CSS file for styling
+import "./Auth.css"; // Importing the CSS file for styling
 
 // Defining the Authentication component
 export default function Auth() {
-    let loginSuccessful;
-
     const navigate = useNavigate();
 
     const onFinish = (value) => {
@@ -77,7 +75,9 @@ export default function Auth() {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Log in
                     </Button>
-                    <p className="spacing">Don't have a login? <a href="/register">Register here!</a></p>
+                    <p className="spacing">
+                        Don't have a login? <a href="/register">Register here!</a>
+                    </p>
                 </Form.Item>
             </Form>
         </div>

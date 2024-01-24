@@ -6,8 +6,10 @@ import Register from "./pages/Register/Register";
 import Profiles from "./pages/Profiles/Profiles";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import Search from "./pages/Search/Search";
 
 import "./App.css";
+
 
 function App() {
     return (
@@ -19,6 +21,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/profile" element={<Profiles />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/tasker" element={<Search />} />
             </Routes>
             <Footer />
         </div>

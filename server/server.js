@@ -32,14 +32,14 @@ app.post("/validatePassword", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-    const { username, password, email, accType } = req.body;
+    const { username, password, email, accType, firstname, lastname } = req.body;
     console.log(req.body);
-    db.run("INSERT INTO credentials(username, password, email, accType) VALUES (?, ?, ?, ?)", [username, password, email, accType], (err) => {
+    db.run("INSERT INTO credentials(username, password, email, accType, name) VALUES (?, ?, ?, ?, ?)", [username, password, email, accType, firstname + " " + lastname], (err) => {
         if (err) {
             throw err;
         }
-        console.log("Record inserted successfully");
-        res.send({ success: true });
+        console.log("Record inserted successfully into credentials");
+        // res.send({ success: true });
     });
 });
 

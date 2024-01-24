@@ -20,9 +20,14 @@ import {
 
 import users from "../../data/profile.json"
 
+// For Maps
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { useMemo } from "react";
+
+
 function Profile() {
 
-    function getRandomUserArr(usersArr) {
+        function getRandomUserArr(usersArr) {
         const ranIndex = Math.floor(Math.random() * users.length)
 
         return usersArr[ranIndex]
@@ -30,7 +35,16 @@ function Profile() {
 
     const randomUser = getRandomUserArr(users);
 
-    console.log(randomUser)
+    const randomUserLat = parseInt(randomUser.latitude)
+    const randomUserLng = parseInt(randomUser.longitude)
+
+    console.log(randomUserLat, randomUserLng)
+
+    const { isLoaded } = useLoadScript({
+      googleMapsApiKey: "AIzaSyBLe7vdeUj-k2dbU8NU_YW4Kq0xwN93J3w",
+    });
+
+    const center = useMemo(() => ({ lat: randomUserLat, lng: randomUserLng }), []);
 
     return (
     <section style={{ backgroundColor: '#eee' }}>
@@ -55,8 +69,8 @@ function Profile() {
                   className="rounded-circle"
                   style={{ width: '150px' }}
                   fluid />
-                <p className="text-muted mb-1">Full Stack Developer</p>
-                <p className="text-muted mb-4">{randomUser.address}</p>
+                <p className="text-muted mb-1">{randomUser.jobTitle}</p>
+                <p className="text-muted mb-4">{randomUser.country}</p>
                 <div className="d-flex justify-content-center mb-2">
                   <MDBBtn>Follow</MDBBtn>
                   <MDBBtn outline className="ms-1">Message</MDBBtn>
@@ -95,7 +109,7 @@ function Profile() {
                     <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{randomUser.name}</MDBCardText>
+                    <MDBCardText className="text-muted">{randomUser.name.first + " " + randomUser.name.last}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -119,10 +133,10 @@ function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Address</MDBCardText>
+                    <MDBCardText>Country</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{randomUser.address}</MDBCardText>
+                    <MDBCardText className="text-muted">{randomUser.country}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
@@ -194,6 +208,16 @@ function Profile() {
               </MDBCol>
             </MDBRow>
           </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <div className="googleMaps">
+            {!isLoaded ? (<h1>Loading...</h1>) : 
+            (
+            <GoogleMap mapContainerClassName="maps-container" center={center} zoom={10}>
+              <Marker position={center} />
+            </GoogleMap>
+            )}
+          </div>
         </MDBRow>
       </MDBContainer>
     </section>

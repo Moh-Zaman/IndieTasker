@@ -1,26 +1,727 @@
 [
-    { "id": "1", "name": "Alice Johnson", "email": "alice.j@email.com", "phoneNum": "+1 (555) 987-6543", "address": "456 Oak Avenue, Townsville, State, 54321", "website": "www.alicejohnson.net", "github": "alicejohnson", "twitter": "alicej_tweets", "instagram": "alicej_art", "project1": "Responsive Web Design for Local Business", "project2": "Digital Illustration Series - Nature Themes" },
-    { "id": "2", "name": "Bob Smith", "email": "bob.smith@email.com", "phoneNum": "+1 (555) 555-5555", "address": "789 Pine Street, Villagetown, State, 67890", "website": "www.bobsmith.dev", "github": "bobsmith_dev", "twitter": "bobsmith_coder", "instagram": "bobsmith_code", "project1": "Custom WordPress Theme Development", "project2": "Mobile App UI/UX Redesign" },
-    { "id": "3", "name": "Eva Martinez", "email": "eva.m@email.com", "phoneNum": "+1 (555) 876-5432", "address": "321 Maple Drive, Cityburg, State, 09876", "website": "www.evamartinez.design", "github": "evam_design", "twitter": "evam_tweets", "instagram": "evam_creativity", "project1": "Logo Design for Local Cafe", "project2": "UI Design for Fitness App" },
-    { "id": "4", "name": "David Brown", "email": "david.b@email.com", "phoneNum": "+1 (555) 222-3333", "address": "987 Cedar Lane, Villagetown, State, 23456", "website": "www.davidbrown.dev", "github": "davidbrown_dev", "twitter": "davidb_coder", "instagram": "davidbrown_code", "project1": "E-learning Platform Development", "project2": "Portfolio Redesign for Graphic Designer" },
-    { "id": "5", "name": "Sophie White", "email": "sophie.w@email.com", "phoneNum": "+1 (555) 777-8888", "address": "654 Birch Street, Hamletown, State, 34567", "website": "www.sophiewhite.art", "github": "sophiew_artist", "twitter": "sophie_artist", "instagram": "sophiewhite_draws", "project1": "Illustration Series for Children's Book", "project2": "Mural Artwork for Community Center" },
-    { "id": "6", "name": "Daniel Miller", "email": "daniel.m@email.com", "phoneNum": "+1 (555) 444-5678", "address": "876 Walnut Drive, Cityville, State, 45678", "website": "www.danielmiller.codes", "github": "danielm_coder", "twitter": "daniel_coder_tweets", "instagram": "danielmiller_dev", "project1": "Web Application for Task Management", "project2": "Interactive Infographic for Education" },
-    { "id": "7", "name": "Mia Turner", "email": "mia.t@email.com", "phoneNum": "+1 (555) 111-2222", "address": "234 Pine Lane, Townsville, State, 56789", "website": "www.miaturner.design", "github": "miaturner_design", "twitter": "mia_design_tweets", "instagram": "miaturner_creates", "project1": "Brand Identity for Fashion Boutique", "project2": "Mobile App Design for Travel Planning" },
-    { "id": "8", "name": "Jackson Garcia", "email": "jackson.g@email.com", "phoneNum": "+1 (555) 333-4444", "address": "543 Cedar Avenue, Villagetown, State, 67890", "website": "www.jacksongarcia.dev", "github": "jacksong_dev", "twitter": "jackson_coder_tweets", "instagram": "jacksongarcia_code", "project1": "E-commerce Website for Local Artisans", "project2": "Dashboard UI for Financial Analytics" },
-    { "id": "9", "name": "Olivia Martinez", "email": "olivia.m@email.com", "phoneNum": "+1 (555) 888-9999", "address": "765 Oak Street, Cityburg, State, 78901", "website": "www.oliviamartinez.art", "github": "oliviam_artist", "twitter": "oliviam_creates", "instagram": "olivia_martinez_draws", "project1": "Digital Painting Series - Fantasy Themes", "project2": "Artwork for Music Album Cover" },
-    { "id": "10", "name": "Liam Davis", "email": "liam.d@email.com", "phoneNum": "+1 (555) 666-7777", "address": "432 Maple Drive, Hamletown, State, 01234", "website": "www.liamdavis.codes", "github": "liamd_coder", "twitter": "liam_code_tweets", "instagram": "liamdavis_dev", "project1": "Custom WordPress Theme for Blog", "project2": "Responsive UI for E-learning Platform" },
-    { "id": "11", "name": "Ava Rodriguez", "email": "ava.r@email.com", "phoneNum": "+1 (555) 123-4567", "address": "876 Elm Lane, Townsville, State, 23456", "website": "www.avarodriguez.design", "github": "avar_artist", "twitter": "avarod_creates", "instagram": "ava_rodriguez_art", "project1": "Logo Design for Tech Startup", "project2": "Illustrations for Children's Book" },
-    { "id": "12", "name": "Henry Taylor", "email": "henry.t@email.com", "phoneNum": "+1 (555) 333-1111", "address": "345 Birch Street, Villagetown, State, 34567", "website": "www.henrytaylor.dev", "github": "henryt_dev", "twitter": "henry_code_tweets", "instagram": "henrytaylor_code", "project1": "Web App for Real-time Collaboration", "project2": "Portfolio Redesign for Photographer" },
-    { "id": "13", "name": "Emma Turner", "email": "emma.t@email.com", "phoneNum": "+1 (555) 999-8888", "address": "567 Cedar Avenue, Cityburg, State, 45678", "website": "www.emmaturner.art", "github": "emmat_artist", "twitter": "emmat_creates", "instagram": "emma_turner_draws", "project1": "Character Design for Video Game", "project2": "Mural Artwork for Community Event" },
-    { "id": "14", "name": "William Garcia", "email": "william.g@email.com", "phoneNum": "+1 (555) 777-6666", "address": "789 Oak Lane, Hamletown, State, 56789", "website": "www.williamgarcia.codes", "github": "williamg_dev", "twitter": "william_code_tweets", "instagram": "williamgarcia_dev", "project1": "E-commerce Website for Art Supplies", "project2": "Dashboard UI for Analytics Platform" },
-    { "id": "15", "name": "Sophia Davis", "email": "sophia.d@email.com", "phoneNum": "+1 (555) 222-3333", "address": "987 Elm Street, Townsville, State, 67890", "website": "www.sophiadavis.design", "github": "sophiad_artist", "twitter": "sophiad_creates", "instagram": "sophia_davis_art", "project1": "Logo and Branding for Restaurant", "project2": "Digital Illustration for Book Cover" },
-    { "id": "16", "name": "James Wilson", "email": "james.w@email.com", "phoneNum": "+1 (555) 444-5555", "address": "234 Pine Lane, Villagetown, State, 78901", "website": "www.jameswilson.dev", "github": "jamesw_dev", "twitter": "james_code_tweets", "instagram": "jameswilson_code", "project1": "Web App for Task Management", "project2": "Portfolio Redesign for UX Designer" },
-    { "id": "17", "name": "Grace Moore", "email": "grace.m@email.com", "phoneNum": "+1 (555) 666-7777", "address": "654 Cedar Avenue, Cityburg, State, 01234", "website": "www.gracemoore.art", "github": "grace_artist", "twitter": "grace_creates", "instagram": "grace_moore_draws", "project1": "Digital Painting Series - Abstract Themes", "project2": "Artwork for Album Cover" },
-    { "id": "18", "name": "Benjamin Robinson", "email": "benjamin.r@email.com", "phoneNum": "+1 (555) 123-4567", "address": "876 Oak Street, Hamletown, State, 23456", "website": "www.benjaminrobinson.codes", "github": "benjaminr_dev", "twitter": "benjamin_code_tweets", "instagram": "benjaminrobinson_dev", "project1": "Custom WordPress Theme for Blog", "project2": "UI Design for Mobile App" },
-    { "id": "19", "name": "Lily Turner", "email": "lily.t@email.com", "phoneNum": "+1 (555) 333-1111", "address": "345 Elm Lane, Townsville, State, 34567", "website": "www.lilyturner.design", "github": "lilyt_artist", "twitter": "lilyt_creates", "instagram": "lily_turner_draws", "project1": "Illustrations for Children's Book", "project2": "Mural Artwork for Community Center" },
-    { "id": "20", "name": "Noah Martinez", "email": "noah.m@email.com", "phoneNum": "+1 (555) 999-8888", "address": "567 Maple Drive, Villagetown, State, 45678", "website": "www.noahmartinez.dev", "github": "noahm_dev", "twitter": "noah_code_tweets", "instagram": "noahmartinez_code", "project1": "E-commerce Website for Local Artisans", "project2": "Dashboard UI for Financial Analytics" },
-    { "id": "21", "name": "Avery Garcia", "email": "avery.g@email.com", "phoneNum": "+1 (555) 777-6666", "address": "789 Pine Street, Cityburg, State, 56789", "website": "www.averygarcia.art", "github": "avery_artist", "twitter": "avery_creates", "instagram": "avery_garcia_draws", "project1": "Logo Design for Tech Startup", "project2": "Digital Illustration for Book Cover" },
-    { "id": "22", "name": "Logan Taylor", "email": "logan.t@email.com", "phoneNum": "+1 (555) 222-3333", "address": "987 Cedar Avenue, Hamletown, State, 67890", "website": "www.logantaylor.codes", "github": "logant_dev", "twitter": "logan_code_tweets", "instagram": "logantaylor_dev", "project1": "Web Application for Task Management", "project2": "Portfolio Redesign for Graphic Designer" },
-    { "id": "23", "name": "Chloe Davis", "email": "chloe.d@email.com", "phoneNum": "+1 (555) 444-5555", "address": "234 Elm Street, Townsville, State, 78901", "website": "www.chloedavis.design", "github": "chloed_artist", "twitter": "chloed_creates", "instagram": "chloe_davis_art", "project1": "Character Design for Video Game", "project2": "Mural Artwork for Community Event" },
-    { "id": "24", "name": "Lucas Wilson", "email": "lucas.w@email.com", "phoneNum": "+1 (555) 666-7777", "address": "654 Oak Lane, Villagetown, State, 01234", "website": "www.lucaswilson.dev", "github": "lucasw_dev", "twitter": "lucas_code_tweets", "instagram": "lucaswilson_code", "project1": "E-commerce Website for Art Supplies", "project2": "Dashboard UI for Analytics Platform" }
+    {
+      "id": "1",
+      "name": {
+        "first": "Alice",
+        "last": "Johnson"
+      },
+      "email": "alice.j@gmail.com",
+      "phoneNum": "555-1234",
+      "country": "USA",
+      "longitude": "-122.4194",
+      "latitude": "37.7749",
+      "jobTitle": "Data Scientist",
+      "website": "www.alicejohnson.com",
+      "github": "alice_data",
+      "twitter": "alice_tweets",
+      "instagram": "alice_gram",
+      "project1": "Machine Learning for Predictive Analytics",
+      "project2": "Big Data Analysis for Healthcare"
+    },
+    {
+      "id": "2",
+      "name": {
+        "first": "David",
+        "last": "Smith"
+      },
+      "email": "david.s@outlook.com",
+      "phoneNum": "555-5678",
+      "country": "Canada",
+      "longitude": "-79.3832",
+      "latitude": "43.6532",
+      "jobTitle": "Software Engineer",
+      "website": "www.davidsmith.dev",
+      "github": "david_dev",
+      "twitter": "david_tweets",
+      "instagram": "david_code",
+      "project1": "Web Application Development with React",
+      "project2": "API Integration for E-commerce Platforms"
+    },
+    {
+      "id": "3",
+      "name": {
+        "first": "Maria",
+        "last": "Lopez"
+      },
+      "email": "maria.l@hotmail.com",
+      "phoneNum": "555-9876",
+      "country": "Spain",
+      "longitude": "-3.7038",
+      "latitude": "40.4168",
+      "jobTitle": "UX/UI Designer",
+      "website": "www.marialopez.design",
+      "github": "maria_designs",
+      "twitter": "maria_designer",
+      "instagram": "maria_uiux",
+      "project1": "Mobile App Redesign for Better User Experience",
+      "project2": "Responsive Web Design for E-commerce"
+    },
+    {
+      "id": "4",
+      "name": {
+        "first": "James",
+        "last": "Miller"
+      },
+      "email": "james.m@gmail.com",
+      "phoneNum": "555-4321",
+      "country": "UK",
+      "longitude": "-0.1276",
+      "latitude": "51.5074",
+      "jobTitle": "Full Stack Developer",
+      "website": "www.jamesmiller.dev",
+      "github": "james_dev",
+      "twitter": "james_tweets",
+      "instagram": "james_code",
+      "project1": "E-commerce Platform Development",
+      "project2": "Real-time Chat Application"
+    },
+    {
+      "id": "5",
+      "name": {
+        "first": "Emily",
+        "last": "Chen"
+      },
+      "email": "emily.c@hotmail.com",
+      "phoneNum": "555-8765",
+      "country": "China",
+      "longitude": "116.4074",
+      "latitude": "39.9042",
+      "jobTitle": "Cybersecurity Analyst",
+      "website": "www.emilychen.security",
+      "github": "emily_security",
+      "twitter": "emily_cyber",
+      "instagram": "emily_secure",
+      "project1": "Network Security Enhancement",
+      "project2": "Incident Response Planning"
+    },
+    {
+      "id": "6",
+      "name": {
+        "first": "Daniel",
+        "last": "Nguyen"
+      },
+      "email": "daniel.n@gmail.com",
+      "phoneNum": "555-2345",
+      "country": "Australia",
+      "longitude": "151.2093",
+      "latitude": "-33.8688",
+      "jobTitle": "Machine Learning Engineer",
+      "website": "www.danielnguyen.ml",
+      "github": "daniel_ml",
+      "twitter": "daniel_ml",
+      "instagram": "daniel_code",
+      "project1": "Natural Language Processing for Chatbots",
+      "project2": "Image Recognition for Autonomous Vehicles"
+    },
+    {
+      "id": "7",
+      "name": {
+        "first": "Sophia",
+        "last": "Garcia"
+      },
+      "email": "sophia.g@outlook.com",
+      "phoneNum": "555-7890",
+      "country": "Mexico",
+      "longitude": "-99.1332",
+      "latitude": "19.4326",
+      "jobTitle": "Product Manager",
+      "website": "www.sophiagarcia.pm",
+      "github": "sophia_pm",
+      "twitter": "sophia_pm",
+      "instagram": "sophia_product",
+      "project1": "Agile Product Development for SaaS",
+      "project2": "Market Research for New Product Launch"
+    },
+    {
+      "id": "8",
+      "name": {
+        "first": "Jonathan",
+        "last": "Wong"
+      },
+      "email": "jonathan.w@hotmail.com",
+      "phoneNum": "555-3456",
+      "country": "Singapore",
+      "longitude": "103.8198",
+      "latitude": "1.3521",
+      "jobTitle": "DevOps Engineer",
+      "website": "www.jonathanwong.devops",
+      "github": "jonathan_devops",
+      "twitter": "jonathan_devops",
+      "instagram": "jonathan_deploy",
+      "project1": "Continuous Integration/Deployment Pipeline Setup",
+      "project2": "Infrastructure as Code for Cloud Platforms"
+    },
+    {
+      "id": "9",
+      "name": {
+        "first": "Isabella",
+        "last": "Martinez"
+      },
+      "email": "isabella.m@gmail.com",
+      "phoneNum": "555-6789",
+      "country": "Brazil",
+      "longitude": "-47.9292",
+      "latitude": "-15.7801",
+      "jobTitle": "Data Engineer",
+      "website": "www.isabellamartinez.data",
+      "github": "isabella_data",
+      "twitter": "isabella_data",
+      "instagram": "isabella_data",
+      "project1": "Data Warehousing and ETL Pipeline",
+      "project2": "Big Data Processing with Apache Spark"
+    },
+    {
+      "id": "10",
+      "name": {
+        "first": "Liam",
+        "last": "Harrison"
+      },
+      "email": "liam.h@outlook.com",
+      "phoneNum": "555-8901",
+      "country": "Ireland",
+      "longitude": "-6.2603",
+      "latitude": "53.3498",
+      "jobTitle": "Frontend Developer",
+      "website": "www.liamharrison.frontend",
+      "github": "liam_frontend",
+      "twitter": "liam_frontend",
+      "instagram": "liam_frontend",
+      "project1": "Responsive Web Design with CSS Grid",
+      "project2": "Single Page Application with React"
+    },
+    {
+      "id": "11",
+      "name": {
+        "first": "Olivia",
+        "last": "Davis"
+      },
+      "email": "olivia.d@gmail.com",
+      "phoneNum": "555-2109",
+      "country": "France",
+      "longitude": "2.3522",
+      "latitude": "48.8566",
+      "jobTitle": "Graphic Designer",
+      "website": "www.oliviadavis.design",
+      "github": "olivia_design",
+      "twitter": "olivia_design",
+      "instagram": "olivia_graphics",
+      "project1": "Branding and Logo Design",
+      "project2": "Print and Digital Media Design"
+    },
+    {
+      "id": "12",
+      "name": {
+        "first": "Ethan",
+        "last": "Taylor"
+      },
+      "email": "ethan.t@hotmail.com",
+      "phoneNum": "555-3210",
+      "country": "Germany",
+      "longitude": "13.4050",
+      "latitude": "52.5200",
+      "jobTitle": "Backend Developer",
+      "website": "www.ethantaylor.backend",
+      "github": "ethan_backend",
+      "twitter": "ethan_backend",
+      "instagram": "ethan_code",
+      "project1": "RESTful API Development with Node.js",
+      "project2": "Database Optimization and Query Performance"
+    },
+    {
+      "id": "13",
+      "name": {
+        "first": "Ava",
+        "last": "Williams"
+      },
+      "email": "ava.w@gmail.com",
+      "phoneNum": "555-5432",
+      "country": "India",
+      "longitude": "77.1025",
+      "latitude": "28.7041",
+      "jobTitle": "AI/ML Researcher",
+      "website": "www.avawilliams.ai",
+      "github": "ava_ai",
+      "twitter": "ava_research",
+      "instagram": "ava_ml",
+      "project1": "Deep Learning for Image Recognition",
+      "project2": "Reinforcement Learning for Robotics"
+    },
+    {
+      "id": "14",
+      "name": {
+        "first": "Mia",
+        "last": "Jones"
+      },
+      "email": "mia.j@outlook.com",
+      "phoneNum": "555-7654",
+      "country": "South Africa",
+      "longitude": "28.0473",
+      "latitude": "-26.2041",
+      "jobTitle": "Digital Marketing Specialist",
+      "website": "www.miajones.marketing",
+      "github": "mia_marketing",
+      "twitter": "mia_marketing",
+      "instagram": "mia_digital",
+      "project1": "Social Media Campaign for Brand Awareness",
+      "project2": "SEO Strategy for E-commerce"
+    },
+    {
+      "id": "15",
+      "name": {
+        "first": "Noah",
+        "last": "Gomez"
+      },
+      "email": "noah.g@hotmail.com",
+      "phoneNum": "555-2345",
+      "country": "Mexico",
+      "longitude": "-99.1332",
+      "latitude": "19.4326",
+      "jobTitle": "IT Project Manager",
+      "website": "www.noahgomez.pm",
+      "github": "noah_pm",
+      "twitter": "noah_pm",
+      "instagram": "noah_project",
+      "project1": "Infrastructure Upgrade for Scalability",
+      "project2": "Agile Software Development Coordination"
+    },
+    {
+      "id": "16",
+      "name": {
+        "first": "Lily",
+        "last": "Brown"
+      },
+      "email": "lily.b@gmail.com",
+      "phoneNum": "555-6789",
+      "country": "Canada",
+      "longitude": "-79.3832",
+      "latitude": "43.6532",
+      "jobTitle": "Quality Assurance Analyst",
+      "website": "www.lilybrown.qa",
+      "github": "lily_qa",
+      "twitter": "lily_testing",
+      "instagram": "lily_qa",
+      "project1": "Automated Testing Framework Implementation",
+      "project2": "User Acceptance Testing for Software Release"
+    },
+    {
+      "id": "17",
+      "name": {
+        "first": "Jackson",
+        "last": "Hill"
+      },
+      "email": "jackson.h@outlook.com",
+      "phoneNum": "555-8901",
+      "country": "USA",
+      "longitude": "-122.4194",
+      "latitude": "37.7749",
+      "jobTitle": "Systems Architect",
+      "website": "www.jacksonhill.architect",
+      "github": "jackson_architect",
+      "twitter": "jackson_architect",
+      "instagram": "jackson_systems",
+      "project1": "Enterprise-level System Integration",
+      "project2": "Cloud Infrastructure Design for Scalability"
+    },
+    {
+      "id": "18",
+      "name": {
+        "first": "Grace",
+        "last": "Young"
+      },
+      "email": "grace.y@hotmail.com",
+      "phoneNum": "555-9876",
+      "country": "Australia",
+      "longitude": "151.2093",
+      "latitude": "-33.8688",
+      "jobTitle": "UX/UI Designer",
+      "website": "www.graceyoung.design",
+      "github": "grace_designs",
+      "twitter": "grace_designer",
+      "instagram": "grace_uiux",
+      "project1": "Mobile App Redesign for Enhanced User Experience",
+      "project2": "Responsive Web Design for Financial Applications"
+    },
+    {
+      "id": "19",
+      "name": {
+        "first": "Logan",
+        "last": "Baker"
+      },
+      "email": "logan.b@gmail.com",
+      "phoneNum": "555-2109",
+      "country": "New Zealand",
+      "longitude": "174.7633",
+      "latitude": "-36.8485",
+      "jobTitle": "Blockchain Developer",
+      "website": "www.loganbaker.blockchain",
+      "github": "logan_blockchain",
+      "twitter": "logan_blockchain",
+      "instagram": "logan_code",
+      "project1": "Smart Contracts Development for Decentralized Applications",
+      "project2": "Cryptocurrency Wallet Integration"
+    },
+    {
+        "id": "20",
+        "name": {
+        "first": "Sophie",
+        "last": "Turner"
+        },
+        "email": "sophie.t@gmail.com",
+        "phoneNum": "555-1122",
+        "country": "United Kingdom",
+        "longitude": "-0.1280",
+        "latitude": "51.5074",
+        "jobTitle": "Mobile App Developer",
+        "website": "www.sophieturner.dev",
+        "github": "sophie_dev",
+        "twitter": "sophie_dev",
+        "instagram": "sophie_code",
+        "project1": "Cross-Platform App Development",
+        "project2": "Augmented Reality Integration"
+    },
+    {
+        "id": "21",
+        "name": {
+        "first": "Elijah",
+        "last": "Williams"
+        },
+        "email": "elijah.w@hotmail.com",
+        "phoneNum": "555-3344",
+        "country": "United States",
+        "longitude": "-74.0060",
+        "latitude": "40.7128",
+        "jobTitle": "Data Analyst",
+        "website": "www.elijahwilliams.analytics",
+        "github": "elijah_analytics",
+        "twitter": "elijah_data",
+        "instagram": "elijah_analyze",
+        "project1": "Statistical Analysis for Business Insights",
+        "project2": "Data Visualization Dashboard Creation"
+    },
+    {
+        "id": "22",
+        "name": {
+        "first": "Hannah",
+        "last": "Lee"
+        },
+        "email": "hannah.l@gmail.com",
+        "phoneNum": "555-5566",
+        "country": "South Korea",
+        "longitude": "126.9780",
+        "latitude": "37.5665",
+        "jobTitle": "UX/UI Designer",
+        "website": "www.hannahlee.design",
+        "github": "hannah_designs",
+        "twitter": "hannah_designer",
+        "instagram": "hannah_uiux",
+        "project1": "Interactive Prototype Design",
+        "project2": "User-Centric Website Redesign"
+    },
+    {
+        "id": "23",
+        "name": {
+        "first": "Caleb",
+        "last": "Wright"
+        },
+        "email": "caleb.w@outlook.com",
+        "phoneNum": "555-7788",
+        "country": "Canada",
+        "longitude": "-79.3832",
+        "latitude": "43.6532",
+        "jobTitle": "Full Stack Developer",
+        "website": "www.calebwright.dev",
+        "github": "caleb_dev",
+        "twitter": "caleb_tweets",
+        "instagram": "caleb_code",
+        "project1": "E-commerce Website Optimization",
+        "project2": "Microservices Architecture Implementation"
+    },
+    {
+        "id": "24",
+        "name": {
+        "first": "Aria",
+        "last": "Nguyen"
+        },
+        "email": "aria.n@hotmail.com",
+        "phoneNum": "555-9900",
+        "country": "Vietnam",
+        "longitude": "105.8544",
+        "latitude": "21.0285",
+        "jobTitle": "Machine Learning Engineer",
+        "website": "www.arianguyen.ml",
+        "github": "aria_ml",
+        "twitter": "aria_ml",
+        "instagram": "aria_code",
+        "project1": "Sentiment Analysis for Social Media",
+        "project2": "Recommendation System Development"
+    },
+    {
+        "id": "25",
+        "name": {
+        "first": "Nathan",
+        "last": "Clark"
+        },
+        "email": "nathan.c@gmail.com",
+        "phoneNum": "555-1122",
+        "country": "Australia",
+        "longitude": "151.2093",
+        "latitude": "-33.8688",
+        "jobTitle": "Cybersecurity Analyst",
+        "website": "www.nathanclark.security",
+        "github": "nathan_security",
+        "twitter": "nathan_cyber",
+        "instagram": "nathan_secure",
+        "project1": "Penetration Testing for Network Security",
+        "project2": "Security Incident Response Planning"
+    },
+    {
+        "id": "26",
+        "name": {
+        "first": "Eva",
+        "last": "Lopez"
+        },
+        "email": "eva.l@outlook.com",
+        "phoneNum": "555-3344",
+        "country": "Spain",
+        "longitude": "-3.7038",
+        "latitude": "40.4168",
+        "jobTitle": "Frontend Developer",
+        "website": "www.evalopez.frontend",
+        "github": "eva_frontend",
+        "twitter": "eva_frontend",
+        "instagram": "eva_frontend",
+        "project1": "Responsive Web Design with CSS Flexbox",
+        "project2": "Progressive Web App Development"
+    },
+    {
+        "id": "27",
+        "name": {
+        "first": "Lucas",
+        "last": "Garcia"
+        },
+        "email": "lucas.g@hotmail.com",
+        "phoneNum": "555-5566",
+        "country": "Brazil",
+        "longitude": "-47.9292",
+        "latitude": "-15.7801",
+        "jobTitle": "DevOps Engineer",
+        "website": "www.lucasgarcia.devops",
+        "github": "lucas_devops",
+        "twitter": "lucas_devops",
+        "instagram": "lucas_deploy",
+        "project1": "Containerization with Docker and Kubernetes",
+        "project2": "Automated Deployment with Jenkins"
+    },
+    {
+        "id": "28",
+        "name": {
+        "first": "Scarlett",
+        "last": "Martinez"
+        },
+        "email": "scarlett.m@gmail.com",
+        "phoneNum": "555-7788",
+        "country": "United States",
+        "longitude": "-122.4194",
+        "latitude": "37.7749",
+        "jobTitle": "Data Engineer",
+        "website": "www.scarlettmartinez.data",
+        "github": "scarlett_data",
+        "twitter": "scarlett_data",
+        "instagram": "scarlett_data",
+        "project1": "ETL Pipeline for Big Data Processing",
+        "project2": "Data Governance and Quality Assurance"
+    },
+    {
+        "id": "29",
+        "name": {
+        "first": "Henry",
+        "last": "Taylor"
+        },
+        "email": "henry.t@outlook.com",
+        "phoneNum": "555-9900",
+        "country": "United Kingdom",
+        "longitude": "-0.1280",
+        "latitude": "51.5074",
+        "jobTitle": "Backend Developer",
+        "website": "www.henrytaylor.backend",
+        "github": "henry_backend",
+        "twitter": "henry_backend",
+        "instagram": "henry_code",
+        "project1": "Database Schema Design and Optimization",
+        "project2": "RESTful API Development with Express.js"
+    },
+    {
+        "id": "30",
+        "name": {
+        "first": "Leah",
+        "last": "Harrison"
+        },
+        "email": "leah.h@gmail.com",
+        "phoneNum": "555-1122",
+        "country": "Canada",
+        "longitude": "-79.3832",
+        "latitude": "43.6532",
+        "jobTitle": "AI/ML Researcher",
+        "website": "www.leahharrison.ai",
+        "github": "leah_ai",
+        "twitter": "leah_research",
+        "instagram": "leah_ml",
+        "project1": "Natural Language Processing for Chatbot Conversations",
+        "project2": "Generative Adversarial Networks for Image Synthesis"
+    },
+    {
+        "id": "31",
+        "name": {
+        "first": "Nicholas",
+        "last": "Davis"
+        },
+        "email": "nicholas.d@outlook.com",
+        "phoneNum": "555-3344",
+        "country": "Australia",
+        "longitude": "151.2093",
+        "latitude": "-33.8688",
+        "jobTitle": "Digital Marketing Specialist",
+        "website": "www.nicholasdavis.marketing",
+        "github": "nicholas_marketing",
+        "twitter": "nicholas_marketing",
+        "instagram": "nicholas_digital",
+        "project1": "Content Marketing Strategy for B2B",
+        "project2": "Email Marketing Automation for Lead Generation"
+    },
+    {
+        "id": "32",
+        "name": {
+        "first": "Penelope",
+        "last": "Gomez"
+        },
+        "email": "penelope.g@hotmail.com",
+        "phoneNum": "555-5566",
+        "country": "Mexico",
+        "longitude": "-99.1332",
+        "latitude": "19.4326",
+        "jobTitle": "IT Project Manager",
+        "website": "www.penelopegomez.pm",
+        "github": "penelope_pm",
+        "twitter": "penelope_pm",
+        "instagram": "penelope_project",
+        "project1": "Digital Transformation Project Implementation",
+        "project2": "Project Portfolio Management for IT"
+    },
+    {
+        "id": "33",
+        "name": {
+        "first": "Owen",
+        "last": "Brown"
+        },
+        "email": "owen.b@gmail.com",
+        "phoneNum": "555-7788",
+        "country": "United States",
+        "longitude": "-122.4194",
+        "latitude": "37.7749",
+        "jobTitle": "Quality Assurance Analyst",
+        "website": "www.owenbrown.qa",
+        "github": "owen_qa",
+        "twitter": "owen_testing",
+        "instagram": "owen_qa",
+        "project1": "Automated Test Script Development",
+        "project2": "Performance Testing for Scalable Systems"
+    },
+    {
+        "id": "34",
+        "name": {
+        "first": "Layla",
+        "last": "Hill"
+        },
+        "email": "layla.h@outlook.com",
+        "phoneNum": "555-9900",
+        "country": "Canada",
+        "longitude": "-79.3832",
+        "latitude": "43.6532",
+        "jobTitle": "Systems Architect",
+        "website": "www.laylahill.architect",
+        "github": "layla_architect",
+        "twitter": "layla_architect",
+        "instagram": "layla_systems",
+        "project1": "Cloud-native Application Architecture",
+        "project2": "Microservices Design for Scalable Systems"
+    },
+    {
+        "id": "35",
+        "name": {
+        "first": "Eli",
+        "last": "Young"
+        },
+        "email": "eli.y@hotmail.com",
+        "phoneNum": "555-5566",
+        "country": "Australia",
+        "longitude": "151.2093",
+        "latitude": "-33.8688",
+        "jobTitle": "UX/UI Designer",
+        "website": "www.eliyoung.design",
+        "github": "eli_designs",
+        "twitter": "eli_designer",
+        "instagram": "eli_uiux",
+        "project1": "Mobile App Interface Design for Accessibility",
+        "project2": "User-Centered Design for Financial Applications"
+    },
+    {
+        "id": "36",
+        "name": {
+        "first": "Hudson",
+        "last": "Baker"
+        },
+        "email": "hudson.b@gmail.com",
+        "phoneNum": "555-7788",
+        "country": "New Zealand",
+        "longitude": "174.7633",
+        "latitude": "-36.8485",
+        "jobTitle": "Blockchain Developer",
+        "website": "www.hudsonbaker.blockchain",
+        "github": "hudson_blockchain",
+        "twitter": "hudson_blockchain",
+        "instagram": "hudson_code",
+        "project1": "Smart Contracts Development for Tokenization",
+        "project2": "Decentralized Identity Management with Blockchain"
+    },
+    {
+        "id": "37",
+        "name": {
+        "first": "Stella",
+        "last": "Cooper"
+        },
+        "email": "stella.c@gmail.com",
+        "phoneNum": "555-9900",
+        "country": "United States",
+        "longitude": "-77.0369",
+        "latitude": "38.9072",
+        "jobTitle": "Artificial Intelligence Engineer",
+        "website": "www.stellacooper.ai",
+        "github": "stella_ai",
+        "twitter": "stella_ai",
+        "instagram": "stella_code",
+        "project1": "Neural Network Implementation for Image Recognition",
+        "project2": "Reinforcement Learning for Autonomous Systems"
+    },
+    {
+        "id": "38",
+        "name": {
+        "first": "Leo",
+        "last": "Wright"
+        },
+        "email": "leo.w@outlook.com",
+        "phoneNum": "555-3344",
+        "country": "Canada",
+        "longitude": "-79.3832",
+        "latitude": "43.6532",
+        "jobTitle": "Software Engineer",
+        "website": "www.leowright.dev",
+        "github": "leo_dev",
+        "twitter": "leo_tweets",
+        "instagram": "leo_code",
+        "project1": "Cross-Platform Mobile App Development",
+        "project2": "Cloud-based Software Architecture"
+    }
 ]
+           
+    
+   
