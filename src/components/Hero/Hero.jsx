@@ -48,7 +48,6 @@ function Hero() {
             navigate(`/tasker?job=${searchValue}`)
         }
     }
-
     return (
         <div className="hero-container">
             <div className="row hero-row hero-image">
