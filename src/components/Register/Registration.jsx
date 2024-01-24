@@ -34,11 +34,8 @@ function Registration() {
                     firstname: userInfo.firstname,
                     lastname: userInfo.lastname,
                 })
-                .then(() => {
-                    alert("Registered!");
-                })
-                .catch(function (error) {
-                    alert(error);
+                .catch((err) => {
+                    alert("This username is already taken!");
                 });
         } else {
             alert("Passwords don't match!");

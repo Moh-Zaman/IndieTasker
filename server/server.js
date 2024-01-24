@@ -31,15 +31,24 @@ app.post("/validatePassword", (req, res) => {
     });
 });
 
-app.post("/register", (req, res) => {
+app.post("/register", (req, next) => {
     const { username, password, email, accType, firstname, lastname } = req.body;
     console.log(req.body);
     db.run("INSERT INTO credentials(username, password, email, accType, name) VALUES (?, ?, ?, ?, ?)", [username, password, email, accType, firstname + " " + lastname], (err) => {
         if (err) {
-            throw err;
+            return next(err);
         }
         console.log("Record inserted successfully into credentials");
         // res.send({ success: true });
+    });
+});
+
+app.post("/getUser", (req, res) => {
+    const user = req.body.user_key;
+    console.log(user);
+    db.all(`SELECT * FROM credentials WHERE username = '${user}'`, (err, rows) => {
+        console.log(rows);
+        res.json(rows);
     });
 });
 

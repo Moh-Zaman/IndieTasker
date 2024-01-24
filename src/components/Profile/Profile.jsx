@@ -1,4 +1,4 @@
-import React from "react";
+import axios from "axios";
 import "./Profile.css";
 import {
     MDBCol,
@@ -17,14 +17,17 @@ import {
     MDBListGroup,
     MDBListGroupItem,
 } from "mdb-react-ui-kit";
-
+import { useLocation } from 'react-router-dom';
 import users from "../../data/profile.json";
 
 // For Maps
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 
 function Profile() {
+    const location = useLocation();
+    const searchValue = new URLSearchParams(location.search).get('id')
+
     // Function to get cookie name (for logged in user)
     function getCookie(name) {
         const value = `; ${document.cookie}`;
@@ -32,26 +35,24 @@ function Profile() {
         if (parts.length === 2) return parts.pop().split(";").shift();
     }
     // Return profile data based on cookie name
-    console.log(getCookie("user_key"));
+    useEffect(() => {
+        const cookie = { user_key: getCookie("user_key") };
+        axios.post("http://localhost:3001/getUser", cookie).then((res) => {
+            console.log(res.data[0]);
+        });
+    }, []);
 
-    function getRandomUserArr(usersArr) {
-        const ranIndex = Math.floor(Math.random() * users.length);
-
-        return usersArr[ranIndex];
-    }
-
-    const randomUser = getRandomUserArr(users);
-
-    const randomUserLat = parseInt(randomUser.latitude);
-    const randomUserLng = parseInt(randomUser.longitude);
-
-    console.log(randomUserLat, randomUserLng);
+    // Display profile from gigs
+    let filteredUsers = users.filter(user => user.id == `${searchValue}`)
+    
+    const userLat = parseInt(filteredUsers[0].latitude);
+    const userLng = parseInt(filteredUsers[0].longitude);
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyBLe7vdeUj-k2dbU8NU_YW4Kq0xwN93J3w",
     });
 
-    const center = useMemo(() => ({ lat: randomUserLat, lng: randomUserLng }), []);
+    const center = useMemo(() => ({ lat: userLat, lng: userLng }), []);
 
     return (
         <section style={{ backgroundColor: "#eee" }}>
@@ -77,8 +78,8 @@ function Profile() {
                                     style={{ width: "150px" }}
                                     fluid
                                 />
-                                <p className="text-muted mb-1">{randomUser.jobTitle}</p>
-                                <p className="text-muted mb-4">{randomUser.country}</p>
+                                <p className="text-muted mb-1">{filteredUsers[0].jobTitle}</p>
+                                <p className="text-muted mb-4">{filteredUsers[0].country}</p>
                                 <div className="d-flex justify-content-center mb-2">
                                     <MDBBtn>Follow</MDBBtn>
                                     <MDBBtn outline className="ms-1">
@@ -93,19 +94,19 @@ function Profile() {
                                 <MDBListGroup flush className="rounded-3">
                                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                                         <MDBIcon fas icon="globe fa-lg text-warning" />
-                                        <MDBCardText>{randomUser.website}</MDBCardText>
+                                        <MDBCardText>{filteredUsers[0].website}</MDBCardText>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                                         <MDBIcon fab icon="github fa-lg" style={{ color: "#333333" }} />
-                                        <MDBCardText>{randomUser.github}</MDBCardText>
+                                        <MDBCardText>{filteredUsers[0].github}</MDBCardText>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                                         <MDBIcon fab icon="twitter fa-lg" style={{ color: "#55acee" }} />
-                                        <MDBCardText>{randomUser.twitter}</MDBCardText>
+                                        <MDBCardText>{filteredUsers[0].twitter}</MDBCardText>
                                     </MDBListGroupItem>
                                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                                         <MDBIcon fab icon="instagram fa-lg" style={{ color: "#ac2bac" }} />
-                                        <MDBCardText>{randomUser.instagram}</MDBCardText>
+                                        <MDBCardText>{filteredUsers[0].instagram}</MDBCardText>
                                     </MDBListGroupItem>
                                 </MDBListGroup>
                             </MDBCardBody>
@@ -119,7 +120,7 @@ function Profile() {
                                         <MDBCardText>Full Name</MDBCardText>
                                     </MDBCol>
                                     <MDBCol sm="9">
-                                        <MDBCardText className="text-muted">{randomUser.name.first + " " + randomUser.name.last}</MDBCardText>
+                                        <MDBCardText className="text-muted">{filteredUsers[0].name.first + " " + filteredUsers[0].name.last}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                                 <hr />
@@ -128,7 +129,7 @@ function Profile() {
                                         <MDBCardText>Email</MDBCardText>
                                     </MDBCol>
                                     <MDBCol sm="9">
-                                        <MDBCardText className="text-muted">{randomUser.email}</MDBCardText>
+                                        <MDBCardText className="text-muted">{filteredUsers[0].email}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                                 <hr />
@@ -137,7 +138,7 @@ function Profile() {
                                         <MDBCardText>Phone</MDBCardText>
                                     </MDBCol>
                                     <MDBCol sm="9">
-                                        <MDBCardText className="text-muted">{randomUser.phoneNum}</MDBCardText>
+                                        <MDBCardText className="text-muted">{filteredUsers[0].phoneNum}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                                 <hr />
@@ -146,7 +147,7 @@ function Profile() {
                                         <MDBCardText>Country</MDBCardText>
                                     </MDBCol>
                                     <MDBCol sm="9">
-                                        <MDBCardText className="text-muted">{randomUser.country}</MDBCardText>
+                                        <MDBCardText className="text-muted">{filteredUsers[0].country}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                             </MDBCardBody>
@@ -157,41 +158,41 @@ function Profile() {
                                 <MDBCard className="mb-4 mb-md-0">
                                     <MDBCardBody>
                                         <MDBCardText className="mb-4">
-                                            <span className="text-primary font-italic me-1">{randomUser.project1}</span>
+                                            <span className="text-primary font-italic me-1">{filteredUsers[0].project1}</span>
                                         </MDBCardText>
                                         <MDBCardText className="mb-1" style={{ fontSize: ".77rem" }}>
                                             Web Design
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={80} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={70} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Website Markup
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={72} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={25} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             One Page
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={89} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={66} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Mobile Template
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={55} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={77} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Backend API
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={66} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={11} valuemin={0} valuemax={100} />
                                         </MDBProgress>
                                     </MDBCardBody>
                                 </MDBCard>
@@ -201,41 +202,41 @@ function Profile() {
                                 <MDBCard className="mb-4 mb-md-0">
                                     <MDBCardBody>
                                         <MDBCardText className="mb-4">
-                                            <span className="text-primary font-italic me-1">{randomUser.project2}</span>
+                                            <span className="text-primary font-italic me-1">{filteredUsers[0].project2}</span>
                                         </MDBCardText>
                                         <MDBCardText className="mb-1" style={{ fontSize: ".77rem" }}>
                                             Web Design
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={80} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={44} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Website Markup
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={72} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={99} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             One Page
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={89} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={23} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Mobile Template
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={55} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={64} valuemin={0} valuemax={100} />
                                         </MDBProgress>
 
                                         <MDBCardText className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>
                                             Backend API
                                         </MDBCardText>
                                         <MDBProgress className="rounded">
-                                            <MDBProgressBar width={66} valuemin={0} valuemax={100} />
+                                            <MDBProgressBar width={71} valuemin={0} valuemax={100} />
                                         </MDBProgress>
                                     </MDBCardBody>
                                 </MDBCard>
