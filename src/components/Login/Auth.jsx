@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import axios from "axios";
@@ -6,20 +6,25 @@ import { useNavigate } from "react-router-dom";
 import "./Auth.css"; // Importing the CSS file for styling
 
 // Defining the Authentication component
-export default function Auth() {
+function Auth() {
     const navigate = useNavigate();
 
-    const onFinish = (value) => {
-        const { username, password } = value;
+    const [userInfo, setUserInfo] = useState({
+        username: "",
+        password: ""
+    });
+
+
+    const onFinish = () => {
 
         // Sending a request to validate the password
-        axios.post("http://localhost:3001/validatePassword", { username, password }).then((res) => {
+        axios.post("http://localhost:3001/validatePassword", { username: userInfo.username, password: userInfo.password }).then((res) => {
             if (res.data.validation) {
                 // Set cookie to username
-                document.cookie = `user_key=${username}`;
+                document.cookie = `user_key=${userInfo.username}`;
                 navigate("/profile");
             } else {
-                alert("Password bad!");
+                alert("Wrong username or password!");
             }
         });
     };
@@ -39,6 +44,8 @@ export default function Auth() {
                 onFinish={onFinish}>
                 {/* Form input for username */}
                 <Form.Item
+                    onChange={(e) => setUserInfo({ ...userInfo, username: e.target.value })}
+
                     name="username"
                     rules={[
                         {
@@ -51,6 +58,8 @@ export default function Auth() {
 
                 {/* Form input for password */}
                 <Form.Item
+                    onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
+
                     name="password"
                     rules={[
                         {
@@ -78,10 +87,12 @@ export default function Auth() {
                         Log in
                     </Button>
                     <p className="spacing">
-                        Don't have a login? <a href="/register">Register here!</a>
+                        Don't have a login? <a href="/register">Register here!</a> {/* Change link to use "navigate" */}
                     </p>
                 </Form.Item>
             </Form>
         </div>
     );
 }
+export default Auth;
+
