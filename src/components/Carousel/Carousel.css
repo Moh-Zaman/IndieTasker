@@ -1,4 +1,4 @@
-.featured-title {
+.featured-section-title {
     text-align: center;
 }
 
@@ -29,7 +29,7 @@
     margin-top: 12%;
 }
 
-.carousel1 {
+.carousel-slide1 {
     border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
@@ -37,7 +37,7 @@
     position: relative;
 }
 
-.carousel2 {
+.carousel-slide2 {
     border: 1px solid #030b2c;
     height: 400px;
     width: 33vw;
@@ -86,15 +86,15 @@
 
 /* Media query for tablets and smaller screens */
 @media only screen and (max-width: 880px) {
-    .carousel-container {
+    .carousel-slide-container {
         flex-direction: column; 
         align-items: center; 
         margin-bottom: 1px;
     }
 
-    .carousel,
-    .carousel1,
-    .carousel2 {
+    .carousel-slide,
+    .carousel-slide1,
+    .carousel-slide2 {
         width: 100%; 
         border-radius: 0;
         margin: 5px;
@@ -108,16 +108,16 @@
 } 
 
 @media only screen and (max-width: 550px) {
-    .carousel-container {
+    .carousel-slide-container {
         margin-top: 10px;
         margin-bottom: none;
         align-items: center;
         margin-top: 10px;
     }
 
-    .carousel,
-    .carousel1,
-    .carousel2 {
+    .carousel-slide,
+    .carousel-slide1,
+    .carousel-slide2 {
         margin-bottom: none; 
        
     }

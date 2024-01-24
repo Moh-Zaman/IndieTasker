@@ -83,7 +83,7 @@ function Carousel() {
 
     return (
         <>
-            <h1 className="featured-title">Featured Taskers</h1>
+            <h1 className="featured-section-title">Featured Taskers</h1>
             <div className="carousel-slide-container">
                 <div className="carousel-slide">
                     <h3 className="freelancer-type">Carpenters</h3>
