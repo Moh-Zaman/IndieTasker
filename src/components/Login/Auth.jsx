@@ -17,12 +17,14 @@ function Auth() {
     const onFinish = () => {
         // Sending a request to validate the password
         axios.post("http://localhost:3001/validatePassword", { username: userInfo.username, password: userInfo.password }).then((res) => {
-            if (res.data.validation) {
-                // Set cookie to username
-                document.cookie = `user_key=${userInfo.username}`;
-                navigate("/profile?id=" + userInfo.username);
-            } else {
+            if (res.data === null) {
                 alert("Wrong username or password!");
+            } else {
+                console.log(res.data);
+                // Set cookie
+                document.cookie = "loggedIn=true";
+                console.log(res.data[0]);
+                navigate("/profile?id=" + res.data[0].Id);
             }
         });
     };
