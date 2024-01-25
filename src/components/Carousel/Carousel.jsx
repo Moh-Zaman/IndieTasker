@@ -83,9 +83,9 @@ function Carousel() {
 
     return (
         <>
-            <h1 className="featured-title">Featured Taskers</h1>
-            <div className="carousel-container">
-                <div className="carousel">
+            <h1 className="featured-section-title">Featured Taskers</h1>
+            <div className="carousel-slide-container">
+                <div className="carousel-slide">
                     <h3 className="freelancer-type">Carpenters</h3>
 
                     <i className="left-arrow" id="L1" onClick={handleNext}>
@@ -93,7 +93,7 @@ function Carousel() {
                     </i>
 
                     {cards.map((card, index) => (
-                        <motion.div key={index + "0"} className="item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "0"} className="slide-item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
@@ -103,7 +103,7 @@ function Carousel() {
                     </i>
                 </div>
 
-                <div className="carousel">
+                <div className="carousel-slide">
                     <h3 className="freelancer-type">Developers</h3>
 
                     <i className="left-arrow" id="L2" onClick={handleNext}>
@@ -111,7 +111,7 @@ function Carousel() {
                     </i>
 
                     {cards1.map((card, index) => (
-                        <motion.div key={index + "1"} className="item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "1"} className="slide-item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
@@ -121,15 +121,15 @@ function Carousel() {
                     </i>
                 </div>
 
-                <div className="carousel">
-                    <h3 className="freelancer-type">Translators</h3>
+                <div className="carousel-slide">
+                    <h3 className="freelancer-type">Data Scientists</h3>
 
                     <i className="left-arrow" id="L3" onClick={handleNext}>
                         {leftArrow}
                     </i>
 
                     {cards2.map((card, index) => (
-                        <motion.div key={index + "2"} className="item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "2"} className="slide-item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
