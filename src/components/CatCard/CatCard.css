@@ -9,6 +9,7 @@
   color: #faefec;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
   border-color: #030b2c;
+  gap: 10px;
 }
 
 .cat-card-featured-title {
@@ -58,8 +59,9 @@
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
   .cat-card {
-    height: 450px; 
+    height: 400px; 
     width: 350px; 
+    padding: 1px;
   }
 
   .cat-card-image {
