@@ -2,15 +2,14 @@
     background-color: #001d1c; /* matches background colour of image */
     overflow-x: hidden;
     margin: 20px;
+    min-height: 200px;
 }
 
 .hero-search {
     position: absolute;
-    /* left: 13%; */
     top: 5px;
     transform: translate(-50%, -50%);
-    /* background: #2f3640; */
-    background-color: white; /*changes search background bar */
+    background-color: white; 
     height: 60px;
     border-radius: 40px;
     padding: 10px;
@@ -134,3 +133,97 @@
     flex-direction: column;
     justify-content: space-around; 
 }
+
+@media (max-width: 950px) {
+  .hero-container {
+   height: 300px;
+   width: 950px;
+   overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.hero-image img {
+  display: cover;
+}
+
+.hero-searchTextOpen {
+  width: auto; 
+  font-size: 14px; 
+}
+  .radio-inputs {
+      font-size: 12px; 
+      display: flex; 
+      align-items: relative;
+      margin-left: -70px;
+  }
+
+  .hero-search {
+    position: absolute;
+    top: 5px;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+   height: 200px;
+   width: 600px;
+   overflow: hidden;
+}
+
+.hero-image {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  justify-content: center;
+}
+
+  .radio-inputs {
+      font-size: 12px; 
+      display: flex; 
+      align-items: center;
+  }
+
+  .radio-inputs label {
+      margin-bottom: 5px; 
+  }
+
+  .hero-searchTextOpen {
+      width: auto; 
+      font-size: 14px; 
+  }
+
+  .radio-inputs {
+    font-size: 12px; 
+    display: flex; 
+    align-items: relative;
+    margin-left: -90px;
+    /* margin-bottom: 20px; */
+
+}
+
+.hero-search {
+  position: absolute;
+  top: -1px;
+  transform: translate(-50%, -50%);
+  background-color: white; 
+  height: 60px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-left: 70px;
+}
+
+}
+

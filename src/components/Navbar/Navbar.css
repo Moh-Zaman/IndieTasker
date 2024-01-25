@@ -113,7 +113,7 @@
 }
 
 /* Media Queries for Navigation Menu */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 700px) {
   navigation-menu {
     position: fixed;
     top: 0;
