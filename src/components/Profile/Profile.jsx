@@ -18,7 +18,6 @@ import {
     MDBListGroupItem,
 } from "mdb-react-ui-kit";
 import { useLocation } from "react-router-dom";
-import users from "../../data/profile.json";
 
 // For Maps
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
@@ -68,8 +67,6 @@ function Profile() {
     }, []);
 
     if (setFetched) {
-        console.log(userData);
-
         // const userArray = Object.entries(userData).map(([key, value]) => ({
         //     key,
         //     value,

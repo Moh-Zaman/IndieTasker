@@ -52,13 +52,13 @@ app.post("/getUser", (req, res) => {
     });
 });
 
-// app.post("/getUserData", (req, res) => {
-//     const r = req.body;
-//     db.all(`SELECT * FROM users`, (err, rows) => {
-//         console.log(rows);
-//         res.json(rows);
-//     });
-// });
+app.post("/getUserData", (req, res) => {
+    const r = req.body;
+    db.all(`SELECT * FROM users`, (err, rows) => {
+        console.log(rows);
+        res.json(rows);
+    });
+});
 
 app.listen(3001, "localhost", () => {
     console.log("Express server started on port 3001");
