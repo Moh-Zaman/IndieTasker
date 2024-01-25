@@ -46,7 +46,7 @@ function GigCard() {
           <MDBCardText>
             Here is one of the projects from this tasker. Click below to hire them!
           </MDBCardText>
-          <MDBBtn href={`/profile?id=${filteredUsers[0].id}`}>Go to my profile</MDBBtn>
+          <MDBBtn href={`/profile?id=${filteredUsers[0].id}`} className="gig-button">Go to my profile</MDBBtn>
         </MDBCardBody>
       </MDBCard>
       <MDBCard className='gig-card-card'>
@@ -61,7 +61,7 @@ function GigCard() {
           <MDBCardText>
             Here is one of the projects from this tasker. Click below to hire them!
           </MDBCardText>
-          <MDBBtn href={`/profile?id=${filteredUsers[0].id}`}>Go to my profile</MDBBtn>
+          <MDBBtn href={`/profile?id=${filteredUsers[0].id}`} className="gig-button">Go to my profile</MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </div>
