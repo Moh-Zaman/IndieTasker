@@ -10,9 +10,11 @@ const leftArrow = <FontAwesomeIcon icon={faCircleChevronLeft} size="3x" />;
 const rightArrow = <FontAwesomeIcon icon={faCircleChevronRight} size="3x" />;
 
 function Slide() {
-    const cardWidth = 450; // Adjust this value according to your card width
+    const cardWidth = 500; // Adjust this value according to your card width
     const cardCount = catArr.length;
     const totalWidth = cardWidth * cardCount;
+    const doubledCatArr = [...catArr, ...catArr];
+    const totalWidthWithSpace = totalWidth + 100;
 
     return (
         <div className="slider-container">
@@ -22,9 +24,9 @@ function Slide() {
                     drag="x"
                     dragConstraints={{
                         left:  -totalWidth + window.innerWidth, 
-                        right: 0, // Allow dragging to the right until the beginning of cards
+                        right: 0, 
                     }}
-                    dragElastic={0.1} // Adjust the drag elasticity
+                    dragElastic={0.1} 
                     className="slider"
                 >
                     <motion.div
