@@ -3,6 +3,7 @@
     overflow-x: hidden;
     margin: 20px;
     min-height: 200px;
+    gap: 10px;
 }
 
 .hero-search {
@@ -134,11 +135,12 @@
     justify-content: space-around; 
 }
 
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
   .hero-container {
    height: 300px;
    width: 950px;
    overflow: hidden;
+   gap: 10px;
 }
 
 .hero-image {
@@ -174,13 +176,15 @@
     margin-left: 100px;
 }
 
-}
+} */
 
-@media (max-width: 600px) {
+
+@media (max-width: 630px) {
   .hero-container {
    height: 200px;
    width: 600px;
    overflow: hidden;
+   gap: 10px;
 }
 
 .hero-image {
@@ -210,7 +214,7 @@
     display: flex; 
     align-items: relative;
     margin-left: -90px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 
 }
 
@@ -226,4 +230,5 @@
 }
 
 }
+
 
