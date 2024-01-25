@@ -33,7 +33,7 @@ function GigCard() {
   }, []);
 
   return (
-    <div>
+    <div className='gig-container-card'>
       <MDBCard className='gig-card-card'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
           <MDBCardImage src={randomImage + ".jpeg"} fluid alt='...' />
