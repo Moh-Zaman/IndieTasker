@@ -49,7 +49,7 @@ function Hero() {
   return (
     <Card className="hero-container">
       <div className="row hero-row">
-        <img
+        <Card.Img
           src="./assets/Hero/Banner-png/1600x500HeroBanner(withFilter).png"
           className="hero-image"
         />

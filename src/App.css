@@ -10,6 +10,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    color: black;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
 }
