@@ -1,5 +1,3 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import "./CatCard.css";
 import catArr from "../../data/catCardData.json";
 
