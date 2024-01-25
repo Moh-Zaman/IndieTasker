@@ -14,6 +14,8 @@ const rightArrow = <FontAwesomeIcon icon={faCircleChevronRight} size="3x" />;
 
 function Slide() {
     return (
+        <div className="slider-container">
+        <h1 className="slider-section-title">Tasker Categories</h1>
         <div classname="slider-container">
             <motion.div className="slider">
                 <motion.div drag="x" className="inner-slider">
@@ -26,6 +28,7 @@ function Slide() {
                     })}
                 </motion.div>
             </motion.div>
+        </div>
         </div>
     );
 }

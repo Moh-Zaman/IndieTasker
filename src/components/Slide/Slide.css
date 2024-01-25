@@ -1,4 +1,9 @@
 .slider-container {
+    padding: 10px;
+    justify-content: space-around;
+    margin: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .inner-slider {
@@ -8,4 +13,9 @@
 }
 
 .cat {
+}
+
+.slider-section-title {
+    text-align: center;
+    margin-bottom: 20px;
 }
