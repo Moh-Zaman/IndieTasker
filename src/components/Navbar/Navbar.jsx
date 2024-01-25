@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+    const [isNavExpanded, setIsNavExpanded] = useState(false);
 
-  const toggleNav = () => {
-    setIsNavExpanded(!isNavExpanded);
-  };
+    const toggleNav = () => {
+        setIsNavExpanded(!isNavExpanded);
+    };
 
   return (
     <nav className="navigation">
