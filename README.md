@@ -27,7 +27,7 @@ We worked towards the following ACs:
 </ul>
 
 ## Link to published site
-TBC
+https://indietasker.netlify.app/
 
 ## Screenshot of site
 ![Screeshot of the desktop or large screen site](site-screenshot.jpg)
