@@ -47,7 +47,10 @@ function Slide() {
   const cards2 = [<CatCard />, <CatCard />, <CatCard />, <CatCard />, <CatCard />, <CatCard />];
 
   return (
+    <>
+    <h1 className="featured-section-title">Featured Taskers</h1>
         <div className="slide">
+          <div className="slide-container">
           <h3 className="freelancer-type">HandyPeople</h3>
 
           <i className="left-arrow" id="L3" onClick={handleNext}>
@@ -71,6 +74,8 @@ function Slide() {
             {rightArrow}
           </i>
         </div>
+        </div>
+  </>
   );
 }
 
