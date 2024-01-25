@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 app.use(express.json({ limit: "10mb" }));
 
-let db = new sqlite3.Database("credentials.db", (err) => {
+let db = new sqlite3.Database("users.db", (err) => {
     if (err) {
         console.log(err.message);
     }
@@ -19,7 +19,7 @@ let db = new sqlite3.Database("credentials.db", (err) => {
 
 app.post("/validatePassword", (req, res) => {
     const { username, password } = req.body;
-    db.all(`select * from credentials where username = '${username}' and password = '${password}'`, (err, rows) => {
+    db.all(`select * from users where username = '${username}' and password = '${password}'`, (err, rows) => {
         if (err) {
             throw err;
         }
@@ -34,7 +34,7 @@ app.post("/validatePassword", (req, res) => {
 app.post("/register", (req, next) => {
     const { username, password, email, accType, firstname, lastname } = req.body;
     console.log(req.body);
-    db.run("INSERT INTO credentials(username, password, email, accType, name) VALUES (?, ?, ?, ?, ?)", [username, password, email, accType, firstname + " " + lastname], (err) => {
+    db.run("INSERT INTO users(username, password, email, accountType, name) VALUES (?, ?, ?, ?, ?)", [username, password, email, accType, firstname + " " + lastname], (err) => {
         if (err) {
             return next(err);
         }
@@ -46,11 +46,19 @@ app.post("/register", (req, next) => {
 app.post("/getUser", (req, res) => {
     const user = req.body.user_key;
     console.log(user);
-    db.all(`SELECT * FROM credentials WHERE username = '${user}'`, (err, rows) => {
+    db.all(`SELECT * FROM users WHERE username = '${user}'`, (err, rows) => {
         console.log(rows);
         res.json(rows);
     });
 });
+
+// app.post("/getUserData", (req, res) => {
+//     const r = req.body;
+//     db.all(`SELECT * FROM users`, (err, rows) => {
+//         console.log(rows);
+//         res.json(rows);
+//     });
+// });
 
 app.listen(3001, "localhost", () => {
     console.log("Express server started on port 3001");
