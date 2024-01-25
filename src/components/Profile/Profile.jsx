@@ -49,7 +49,7 @@ function Profile() {
     });
 
     const [error, setError] = useState("");
-    const [fetched, setFetched] = useState(false);
+    const [gotten, setGotten] = useState(false);
 
     // Return profile data based on cookie name
     useEffect(() => {
@@ -60,17 +60,14 @@ function Profile() {
                 setUserData(res.data[0]);
             })
             .catch((error) => setError(error.message))
-            .finally(() => setFetched(true));
+            .finally(() => setGotten(true));
     }, []);
-
-    const userLat = parseInt(userData.latitude);
-    const userLng = parseInt(userData.longitude);
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyBLe7vdeUj-k2dbU8NU_YW4Kq0xwN93J3w",
     });
 
-    const center = useMemo(() => ({ lat: userLat, lng: userLng }), []);
+    const center = useMemo(() => ({ lat: userData.latitude, lng: userData.longitude }), []);
     return (
         <section style={{ backgroundColor: "#eee" }}>
             <MDBContainer className="py-5">
@@ -152,10 +149,10 @@ function Profile() {
                                 <hr />
                                 <MDBRow>
                                     <MDBCol sm="3">
-                                        <MDBCardText>Phone</MDBCardText>
+                                        <MDBCardText>About</MDBCardText>
                                     </MDBCol>
                                     <MDBCol sm="9">
-                                        <MDBCardText className="text-muted">021</MDBCardText>
+                                        <MDBCardText className="text-muted">{userData.description}</MDBCardText>
                                     </MDBCol>
                                 </MDBRow>
                                 <hr />
@@ -266,7 +263,7 @@ function Profile() {
                         {!isLoaded ? (
                             <h1>Loading...</h1>
                         ) : (
-                            <GoogleMap mapContainerClassName="maps-container" center={center} zoom={10}>
+                            <GoogleMap mapContainerClassName="maps-container" center={center} zoom={8}>
                                 <Marker position={center} />
                             </GoogleMap>
                         )}
