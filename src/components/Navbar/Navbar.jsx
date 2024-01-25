@@ -8,15 +8,6 @@ function Navbar() {
         setIsNavExpanded(!isNavExpanded);
     };
 
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(";").shift();
-    }
-    if (getCookie("loggedInTasker") === "true") {
-        console.log("yes");
-    }
-
     return (
         <nav className="navigation">
             <h1 className="brand-name">IndieTasker</h1>
