@@ -24,7 +24,8 @@ app.post("/validatePassword", (req, res) => {
             throw err;
         }
         if (rows.length > 0) {
-            res.send({ validation: true });
+            console.log(rows);
+            res.json(rows);
         } else {
             res.send({ validation: false });
         }
@@ -44,17 +45,41 @@ app.post("/register", (req, next) => {
 });
 
 app.post("/getUser", (req, res) => {
-    const user = req.body.user_key;
+    const user = req.body.id;
     console.log(user);
-    db.all(`SELECT * FROM users WHERE username = '${user}'`, (err, rows) => {
+    db.all(`SELECT * FROM users WHERE Id = '${user}'`, (err, rows) => {
         console.log(rows);
         res.json(rows);
     });
 });
 
 app.post("/getUserData", (req, res) => {
-    const r = req.body;
+    const id = req.body;
     db.all(`SELECT * FROM users`, (err, rows) => {
+        console.log(rows);
+        res.json(rows);
+    });
+});
+
+app.post("/getUserCountry", (req, res) => {
+    const id = req.body.search;
+    db.all(`SELECT * FROM users WHERE country = '${id}'`, (err, rows) => {
+        console.log(rows);
+        res.json(rows);
+    });
+});
+
+app.post("/getUserName", (req, res) => {
+    const id = req.body.search;
+    db.all(`SELECT * FROM users WHERE name = '${id}'`, (err, rows) => {
+        console.log(rows);
+        res.json(rows);
+    });
+});
+
+app.post("/getUserJob", (req, res) => {
+    const id = req.body.search;
+    db.all(`SELECT * FROM users WHERE jobTitle = '${id}'`, (err, rows) => {
         console.log(rows);
         res.json(rows);
     });
