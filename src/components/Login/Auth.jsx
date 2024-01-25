@@ -22,7 +22,7 @@ function Auth() {
             } else {
                 console.log(res.data);
                 // Set cookie
-                document.cookie = "loggedIn=true";
+                document.cookie = "loggedInTasker=true";
                 console.log(res.data[0]);
                 navigate("/profile?id=" + res.data[0].Id);
             }
