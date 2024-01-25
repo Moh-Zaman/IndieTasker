@@ -95,8 +95,8 @@ function FreelanceSearch() {
                                         </MDBBtn>
                                         <div className="d-flex justify-content-between text-center mt-5 mb-2">
                                             <div>
-                                                <MDBCardText className="mb-1 h5">{item.phoneNum}</MDBCardText>
-                                                <MDBCardText className="small text-muted mb-0">Phone Number</MDBCardText>
+                                                <MDBCardText className="mb-1 h5">{item.username}</MDBCardText>
+                                                <MDBCardText className="small text-muted mb-0">Username</MDBCardText>
                                             </div>
                                             <div className="px-3">
                                                 <MDBCardText className="mb-1 h5">{item.country}</MDBCardText>
