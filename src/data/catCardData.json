@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Designers & Artists",
-        "desc": "Gorgeous assets and designs for your needs",
+        "desc": "Gorgeous assets and designs",
         "img": "https://source.unsplash.com/800x600/?remote-work"
     },
     {
@@ -14,7 +14,7 @@
     {
         "id": 3,
         "title": "Front End Developers",
-        "desc": "Gorgeous, function code for the web",
+        "desc": "Gorgeous, functional code for the web",
         "img": "https://source.unsplash.com/800x600/?workspace"
     },
     {

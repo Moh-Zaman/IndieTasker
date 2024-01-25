@@ -1,21 +1,25 @@
 .cat-card {
-    height: 380px;
-    width: 250px;
-    margin-bottom: 4%;
-    padding: 5%;
+  height: 380px;
+  width: 250px;
+  margin-bottom: 4%;
+  padding: 5%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #315a63;
+  /* background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%); */
+  color: #faefec;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  border-color: #030b2c;
+}
+
+.cat-card-featured-title{
     text-align: center;
-    border-radius: 5px;
-    background-color: #315a63;
-    /* background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%); */
-    color: #faefec;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
-    border-color: #030b2c;
 }
 
 .cat-card-title {
-    margin-top: 5%;
-    margin-bottom: 6%;
-    font-size: 140%;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  font-size: 140%;
 }
 
 .cat-card-image {
