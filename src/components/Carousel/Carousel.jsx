@@ -93,7 +93,7 @@ function Carousel() {
                     </i>
 
                     {cards.map((card, index) => (
-                        <motion.div key={index + "0"} className="item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "0"} className="slide-item" initial="center" animate={positions[positionIndex[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
@@ -111,7 +111,7 @@ function Carousel() {
                     </i>
 
                     {cards1.map((card, index) => (
-                        <motion.div key={index + "1"} className="item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "1"} className="slide-item" initial="center" animate={positions[positionIndex1[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
@@ -122,14 +122,14 @@ function Carousel() {
                 </div>
 
                 <div className="carousel-slide">
-                    <h3 className="freelancer-type">Translators</h3>
+                    <h3 className="freelancer-type">Data Scientists</h3>
 
                     <i className="left-arrow" id="L3" onClick={handleNext}>
                         {leftArrow}
                     </i>
 
                     {cards2.map((card, index) => (
-                        <motion.div key={index + "2"} className="item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
+                        <motion.div key={index + "2"} className="slide-item" initial="center" animate={positions[positionIndex2[index]]} variants={variants} transition={{ duration: 0.5 }}>
                             {card}
                         </motion.div>
                     ))}
