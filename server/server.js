@@ -27,7 +27,8 @@ app.post("/validatePassword", (req, res) => {
             console.log(rows);
             res.json(rows);
         } else {
-            res.send({ validation: false });
+            rows = null;
+            res.json(rows);
         }
     });
 });
