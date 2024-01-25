@@ -1,19 +1,18 @@
 .cat-card {
-  height: 380px;
-  width: 250px;
+  height: 500px; 
+  width: 400px; 
   margin-bottom: 4%;
-  padding: 5%;
+  padding: 10px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #315a63;
-  /* background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgb(255, 255, 255) 0%, rgba(5, 94, 140, 1) 100%); */
   color: #faefec;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
   border-color: #030b2c;
 }
 
-.cat-card-featured-title{
-    text-align: center;
+.cat-card-featured-title {
+  text-align: center;
 }
 
 .cat-card-title {
@@ -23,51 +22,52 @@
 }
 
 .cat-card-image {
-    width: 90%;
-    pointer-events: none;
-    border-radius: 10px;
-    border: 1px solid #030b2c;
+  width: 90%;
+  pointer-events: none;
+  border-radius: 10px;
+  border: 1px solid #030b2c;
 }
 
 .cat-card-body {
-    padding: 4%;
+  padding: 4%;
 }
 
 .cat-card-text {
-    color: #faefec;
-    margin-bottom: 6%;
-    margin-top: 4%;
-    font-size: 85%;
+  color: #faefec;
+  margin-bottom: 6%;
+  margin-top: 4%;
+  font-size: 85%;
 }
 
 .cat-card-button {
-    border-radius: 14px;
-    width: 50%;
-    height: 30px;
-    cursor: pointer;
-    background-color: #ffc8b5;
-    color: #030b2c;
-    outline: #030b2c;
+  border-radius: 14px;
+  width: 50%;
+  height: 30px;
+  cursor: pointer;
+  background-color: #ffc8b5;
+  color: #030b2c;
+  outline: #030b2c;
 }
 
 .cat-card-button:hover {
-    background-color: #ea906c;
-    color: #030b2c;
-    outline: #030b2c;
+  background-color: #ea906c;
+  color: #030b2c;
+  outline: #030b2c;
 }
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
-    .cat-card {
-        height: 360px;
-    }
+  .cat-card {
+    height: 450px; 
+    width: 350px; 
+  }
 
-    .cat-card-image {
-        width: 80%; /* Adjusted width for mobile screens */
-        outline: none;
-    }
+  .cat-card-image {
+    width: 80%; /* Adjusted width for mobile screens */
+    outline: none;
+  }
 
-    .cat-card-button {
-        width: 45%; /* Adjusted button width for mobile screens */
-    }
+  .cat-card-button {
+    width: 45%; /* Adjusted button width for mobile screens */
+  }
 }

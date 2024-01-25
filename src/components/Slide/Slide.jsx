@@ -10,20 +10,21 @@ const leftArrow = <FontAwesomeIcon icon={faCircleChevronLeft} size="3x" />;
 const rightArrow = <FontAwesomeIcon icon={faCircleChevronRight} size="3x" />;
 
 function Slide() {
-    const cardWidth = 300; // Adjust this value according to your card width
+    const cardWidth = 450; // Adjust this value according to your card width
     const cardCount = catArr.length;
     const totalWidth = cardWidth * cardCount;
-    const containerRef = React.useRef(null);
 
     return (
         <div className="slider-container">
             <h1 className="slider-section-title">Tasker Categories</h1>
             <div className="slider-container">
                 <motion.div
-                    ref={containerRef}
                     drag="x"
-                    dragConstraints={{ left: -totalWidth + window.innerWidth, right: 0 }}
-                    dragElastic={0.2}
+                    dragConstraints={{
+                        left:  -totalWidth + window.innerWidth, 
+                        right: 0, // Allow dragging to the right until the beginning of cards
+                    }}
+                    dragElastic={0.1} // Adjust the drag elasticity
                     className="slider"
                 >
                     <motion.div
