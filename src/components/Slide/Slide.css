@@ -19,7 +19,7 @@
     border: 1px solid lightgray;
     border-radius: 15px;
     height: 500px;
-    width: 33vw;
+    width: 66vw;
     overflow-x: hidden;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
 }
@@ -27,22 +27,6 @@
 .item {
     position: absolute;
     margin-top: 12%;
-}
-
-.slide1 {
-    border: 1px solid #030b2c;
-    height: 400px;
-    width: 33vw;
-    display: flex;
-    position: relative;
-}
-
-.slide2 {
-    border: 1px solid #030b2c;
-    height: 400px;
-    width: 33vw;
-    display: flex;
-    position: relative;
 }
 
 .left-arrow {
