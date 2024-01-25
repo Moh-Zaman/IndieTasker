@@ -11,6 +11,7 @@ import {
 import { useLocation } from 'react-router-dom';
 
 import users from "../../data/profile.json"
+import "./GigCard.css";
 
 function GigCard() {
   const location = useLocation();
@@ -23,7 +24,7 @@ function GigCard() {
 
   return (
     <div>
-    <MDBCard>
+    <MDBCard className='gig-card-card'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
         <a>
@@ -33,12 +34,12 @@ function GigCard() {
       <MDBCardBody>
         <MDBCardTitle>{filteredUsers[0].project1}</MDBCardTitle>
         <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+        Here is one of the projects from this tasker. Click below to hire them!
         </MDBCardText>
         <MDBBtn href={`/profile?id=${filteredUsers[0].id}`}>Go to my profile</MDBBtn>
       </MDBCardBody>
     </MDBCard>
-    <MDBCard>
+    <MDBCard className='gig-card-card'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
         <a>
@@ -48,7 +49,7 @@ function GigCard() {
       <MDBCardBody>
         <MDBCardTitle>{filteredUsers[0].project2}</MDBCardTitle>
         <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          Here is one of the projects from this tasker. Click below to hire them!
         </MDBCardText>
         <MDBBtn href={`/profile?id=${filteredUsers[0].id}`}>Go to my profile</MDBBtn>
       </MDBCardBody>
