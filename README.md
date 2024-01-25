@@ -12,3 +12,30 @@
 <li>Freelancers enjoy the freedom to set their rates and availability.</li>
 </ul></p>
 
+
+## Acceptance Criteria
+We worked towards the following ACs:
+<ul>
+<li>Must use ReactJS</li>
+<li>Must use Node.</li>
+<li>Must have both GET and POST routes for retrieving and adding new data.</li>
+<li>Must deploy this application using Netlify.</li>
+<li>Must utilize at least two libraries, packages, or technologies that we haven't discussed.</li>
+<li>Must have a polished front end/UI.</li>
+<li>Must meet good quality coding standards (indentation, scoping, naming).</li>
+</ul>
+
+## Link to published site
+TBC
+
+## Screenshot of site
+![Screeshot of the desktop or large screen site](site-screenshot.jpg)
+![Screeshot of the mobile or small screen site](site-screenshot.jpg)
+
+## Installation
+
+...
+
+## Credits
+
+...
