@@ -11,18 +11,16 @@ function Auth() {
 
     const [userInfo, setUserInfo] = useState({
         username: "",
-        password: ""
+        password: "",
     });
 
-
     const onFinish = () => {
-
         // Sending a request to validate the password
         axios.post("http://localhost:3001/validatePassword", { username: userInfo.username, password: userInfo.password }).then((res) => {
             if (res.data.validation) {
                 // Set cookie to username
                 document.cookie = `user_key=${userInfo.username}`;
-                navigate("/profile");
+                navigate("/profile?id=" + userInfo.username);
             } else {
                 alert("Wrong username or password!");
             }
@@ -45,7 +43,6 @@ function Auth() {
                 {/* Form input for username */}
                 <Form.Item
                     onChange={(e) => setUserInfo({ ...userInfo, username: e.target.value })}
-
                     name="username"
                     rules={[
                         {
@@ -59,7 +56,6 @@ function Auth() {
                 {/* Form input for password */}
                 <Form.Item
                     onChange={(e) => setUserInfo({ ...userInfo, password: e.target.value })}
-
                     name="password"
                     rules={[
                         {
@@ -95,4 +91,3 @@ function Auth() {
     );
 }
 export default Auth;
-
