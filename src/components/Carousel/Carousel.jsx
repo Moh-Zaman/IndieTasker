@@ -86,7 +86,7 @@ function Carousel() {
             <h1 className="featured-section-title">Featured Taskers</h1>
             <div className="carousel-slide-container">
                 <div className="carousel-slide">
-                    <h3 className="freelancer-type">Carpenters</h3>
+                    <h3 className="freelancer-type">Most In Demand</h3>
 
                     <i className="left-arrow" id="L1" onClick={handleNext}>
                         {leftArrow}
@@ -104,7 +104,7 @@ function Carousel() {
                 </div>
 
                 <div className="carousel-slide">
-                    <h3 className="freelancer-type">Developers</h3>
+                    <h3 className="freelancer-type">Gold Star Taskers</h3>
 
                     <i className="left-arrow" id="L2" onClick={handleNext}>
                         {leftArrow}
@@ -122,7 +122,7 @@ function Carousel() {
                 </div>
 
                 <div className="carousel-slide">
-                    <h3 className="freelancer-type">Data Scientists</h3>
+                    <h3 className="freelancer-type">Frequently Rehired</h3>
 
                     <i className="left-arrow" id="L3" onClick={handleNext}>
                         {leftArrow}
